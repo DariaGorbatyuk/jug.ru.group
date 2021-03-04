@@ -1,0 +1,95 @@
+.header {
+  background-image: url("../img/background.png");
+  background-repeat: no-repeat;
+  background-size: 50% 77%;
+  background-position: right bottom;
+  font-family: $font;
+  box-shadow: 0 4px 4px rgba($black, 0.25),
+  0 4px 4px rgba($black, 0.25);
+  padding-top: 148px;
+  padding-bottom: 79px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background@2x.png");
+  }
+}
+
+.header__logo {
+  display: block;
+  margin-bottom: 53px;
+  margin-left: 3px;
+}
+
+.header__slogan {
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 1.2;
+  color: $black;
+  margin: 0;
+  margin-bottom: 22px;
+  width: 50%;
+}
+
+.header__desc {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0;
+  width: 529px;
+  margin-bottom: 8px;
+
+  &:nth-last-of-type(1) {
+    margin-bottom: 65px;
+  }
+}
+
+.header__btns-container {
+  padding-top: 52px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+}
+
+.header__link {
+  font-family: inherit;
+  width: 210px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+  background-color: $yellow;
+  color: $black;
+  border-radius: 12px;
+  display: block;
+  padding: 19px 0;
+  margin-right: 20px;
+  position: relative;
+
+  &::before{
+    @include pseudo();
+    @include size(52px, 52px);
+    background-image: url("../img/i-yes.png");
+    top: -51px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/i-yes@2x.png");
+    }
+  }
+
+  &--refuse {
+    background-color: $black;
+    color: $white;
+
+    &::before{
+      @include size(44px, 44px);
+      background-image: url("../img/i-no.png");
+      top: -41px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/i-no@2x.png");
+      }
+    }
+  }
+}
