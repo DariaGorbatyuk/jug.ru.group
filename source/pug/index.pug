@@ -2,6 +2,17 @@ doctype html
 html(lang="ru")
   include head.pug
   body
-    header
-    main
-    footer
+    header.header
+      div.container
+        a.header__logo
+          svg.header__svg(width="126" height="41" role="img" aria-labelledby="logo-title")
+            title#logo-title Вы уже на главной странице
+            use(xlink:href="./img/sprite.svg#icon-logo")
+        h1.visually-hidden Конференции в сфере IT
+        p.header__slogan Конференции, которые нужны
+        p.header__desc Мы, JUG Ru Group, делаем крупнейшие конференции для программистов и сочувствующих.
+        |С нас — крутая программа, топовые спикеры, технические доклады без воды.
+        |С вас — готовность смотреть и общаться.
+        div.header__btns-container
+          a.header__link.header__link--buy(href="#") Купить билет
+          a.header__link.header__link--refuse(href="#") Послать в жопу
