@@ -1,15 +1,28 @@
 'use strict';
-var pageHeader = document.querySelector('.page-header');
-var headerToggle = document.querySelector('.page-header__toggle');
+const modalQuestionsTemplate = document.querySelector('#questions').content.querySelector('.questions');
+const body = document.querySelector('body');
+const linksToModal = document.querySelectorAll('.header__link');
 
-pageHeader.classList.remove('page-header--nojs');
-
-headerToggle.addEventListener('click', function () {
-  if (pageHeader.classList.contains('page-header--closed')) {
-    pageHeader.classList.remove('page-header--closed');
-    pageHeader.classList.add('page-header--opened');
-  } else {
-    pageHeader.classList.add('page-header--closed');
-    pageHeader.classList.remove('page-header--opened');
+const onIndexReturn = (evt) => {
+  if (evt.key !== 'Escape' && evt.target.classList.contains('questions__box--m')) {
+    return;
   }
+  evt.preventDefault();
+  console.log('work');
+  body.classList.remove('overflow');
+  document.querySelector('.questions--m').remove();
+}
+
+const onlinksToModalClick = (evt) => {
+  evt.preventDefault();
+  const newModal = modalQuestionsTemplate.cloneNode(true);
+  body.insertAdjacentElement('afterbegin', newModal);
+  body.classList.add('overflow');
+  const returnToIndex = newModal.querySelector('.questions__return-text');
+  returnToIndex.addEventListener('click', onIndexReturn);
+  document.addEventListener('keydown', onIndexReturn);
+}
+
+linksToModal.forEach((link) => {
+  link.addEventListener('click', onlinksToModalClick)
 });

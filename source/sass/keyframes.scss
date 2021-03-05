@@ -6,3 +6,15 @@
     background-position: 256% 256%;
   }
 }
+
+@keyframes modal {
+  0%{
+    top: 0;
+  }
+  50%{
+    top: 10vh;
+  }
+  100%{
+    top: 7vh;
+  }
+}

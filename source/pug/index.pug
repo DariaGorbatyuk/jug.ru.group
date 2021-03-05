@@ -19,23 +19,33 @@ html(lang="ru")
         div.header__btns-container
           a.header__link.header__link--buy(href="questions.html") Купить билет
           a.header__link.header__link--refuse(href="questions.html") Послать в жопу
-    template
-      div.questions
-        div.questions__box
-          h1.visually-hidden Ваши вопросы
-          div.questions__layout
-            div.questions__item.question-yes
-              h2.question-yes__header Я хочу знать, когда будет офлайн
-              form.question-yes__form.form-subscribe(method="post")
-                div.form-subscribe__inp-container
-                  input#email(name="email" type="email" placeholder="Укажите email" required)
-                  label.visually-hidden(for="email") Ваш email
-                button.form-subscribe__btn(type="submit") Подписаться
-              small.question-yes__agreement Нажимая на кнопку вы соглашаетесь на обработку персональных данных
-            div.questions__item.question-no
-              h2.question-no__header Идите в жопу!
-              ul.question-no__list
-                each name in ['Вы свои цены видели?', 'Доклады ни о чем', 'У вас там всё хорошо?', 'Денег нет, но вы держитесь']
-                  li.question-no__item
-                    a.question-no__link(href="#")= name
-          a.questions__return Я кликнул просто посмотреть
+    template#questions
+      div.questions.questions--m
+        div.questions__box.questions__box--m
+          div.container
+            h1.visually-hidden Ваши вопросы
+            div.questions__layout
+              div.questions__item.question-yes
+                h2.question-yes__header Я хочу знать, когда
+                  br
+                  | будет офлайн
+                form.question-yes__form.form-subscribe(method="post")
+                  div.form-subscribe__inp-container
+                    input#email(name="email" type="email" placeholder="Укажите email" required)
+                    label.visually-hidden(for="email") Ваш email
+                  button.form-subscribe__btn(type="submit") Подписаться
+                small.question-yes__agreement Нажимая на кнопку вы соглашаетесь
+                  br
+                  | на обработку
+                  a(href="#")  персональных данных
+              div.questions__item.question-no
+                h2.question-no__header Идите в жопу!
+                ul.question-no__list
+                  each name in ['Вы свои цены видели?', 'Доклады ни о чем', 'У вас там всё хорошо?', 'Денег нет, но вы держитесь']
+                    li.question-no__item
+                      a.question-no__link(href="#")= name
+            div.questions__return-layout(tabindex="0")
+              svg.questions__return-svg(width="24" height="39" role="img")
+                use(xlink:href="./img/sprite.svg#icon-arrow")
+              a.questions__return-text(href="index.html") Я кликнул просто посмотреть
+    script(src="js/script.js")

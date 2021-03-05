@@ -1,7 +1,27 @@
 .questions {
+  &--m{
+    background-color: rgba($black, 0.6);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+  }
+}
+
+.questions__box {
   font-family: $font;
   padding-top: 87px;
   padding-bottom: 75px;
+
+  &--m {
+    position: absolute;
+    background-color: $white;
+    width: 100%;
+    min-height: 803px;
+    animation: modal 700ms ease-in forwards;
+  }
 }
 
 .questions__layout {
