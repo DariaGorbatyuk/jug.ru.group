@@ -1,0 +1,51 @@
+.question-yes {
+  font-family: $font;
+  padding: 49px 4.2% 40px 2.3%;
+}
+
+.question-yes__header {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1.3;
+  color: $black;
+  font-family: inherit;
+  margin: 0;
+  padding-left: 77px;
+  margin-bottom: 149px;
+  position: relative;
+
+  &::before {
+    @include pseudo();
+    @include size(60px, 60px);
+    background-repeat: no-repeat;
+    background-image: url("../img/i-yes.png");
+    background-size: 60px 60px;
+    left: 4px;
+    top: 7px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/i-yes@2x.png");
+    }
+  }
+}
+
+.question-yes__agreement {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.5;
+  color: rgba($black, 0.32);
+  margin-left: 24px;
+  display: block;
+
+  a {
+    text-decoration-line: underline;
+    text-decoration-skip-ink: none;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      color: rgba($black, 0.6);
+    }
+  }
+}

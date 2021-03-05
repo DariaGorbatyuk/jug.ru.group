@@ -21,8 +21,36 @@
 				<p class="header__desc">Мы, JUG Ru Group, делаем крупнейшие конференции для программистов и сочувствующих.</p>
 				<p class="header__desc">С нас — крутая программа, топовые спикеры, технические доклады без воды.</p>
 				<p class="header__desc">С вас — готовность смотреть и общаться.</p>
-				<div class="header__btns-container"><a class="header__link header__link--buy" href="#">Купить билет</a><a class="header__link header__link--refuse" href="#">Послать в жопу</a></div>
+				<div class="header__btns-container"><a class="header__link header__link--buy" href="questions.html">Купить билет</a><a class="header__link header__link--refuse" href="questions.html">Послать в жопу</a></div>
 			</div>
 		</header>
+		<template>
+			<div class="questions">
+				<div class="questions__box">
+					<h1 class="visually-hidden">Ваши вопросы</h1>
+					<div class="questions__layout">
+						<div class="questions__item question-yes">
+							<h2 class="question-yes__header">Я хочу знать, когда будет офлайн</h2>
+							<form class="question-yes__form form-subscribe" method="post">
+								<div class="form-subscribe__inp-container">
+									<input id="email" name="email" type="email" placeholder="Укажите email" required>
+									<label class="visually-hidden" for="email">Ваш email</label>
+								</div>
+								<button class="form-subscribe__btn" type="submit">Подписаться</button>
+							</form><small class="question-yes__agreement">Нажимая на кнопку вы соглашаетесь на обработку персональных данных</small>
+						</div>
+						<div class="questions__item question-no">
+							<h2 class="question-no__header">Идите в жопу!</h2>
+							<ul class="question-no__list">
+								<li class="question-no__item"><a class="question-no__link" href="#">Вы свои цены видели?</a></li>
+								<li class="question-no__item"><a class="question-no__link" href="#">Доклады ни о чем</a></li>
+								<li class="question-no__item"><a class="question-no__link" href="#">У вас там всё хорошо?</a></li>
+								<li class="question-no__item"><a class="question-no__link" href="#">Денег нет, но вы держитесь</a></li>
+							</ul>
+						</div>
+					</div><a class="questions__return">Я кликнул просто посмотреть</a>
+				</div>
+			</div>
+		</template>
 	</body>
 </html>

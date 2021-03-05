@@ -2,4 +2,31 @@ doctype html
 html(lang="ru")
   include head.pug
   body
-    header
+    div.container
+      div.questions
+        div.questions__box
+          h1.visually-hidden Ваши вопросы
+          div.questions__layout
+            div.questions__item.question-yes
+              h2.question-yes__header Я хочу знать, когда
+                br
+                | будет офлайн
+              form.question-yes__form.form-subscribe(method="post")
+                div.form-subscribe__inp-container
+                  input#email(name="email" type="email" placeholder="Укажите email" required)
+                  label.visually-hidden(for="email") Ваш email
+                button.form-subscribe__btn(type="submit") Подписаться
+              small.question-yes__agreement Нажимая на кнопку вы соглашаетесь
+                br
+                | на обработку
+                a(href="#")  персональных данных
+            div.questions__item.question-no
+              h2.question-no__header Идите в жопу!
+              ul.question-no__list
+                each name in ['Вы свои цены видели?', 'Доклады ни о чем', 'У вас там всё хорошо?', 'Денег нет, но вы держитесь']
+                  li.question-no__item
+                    a.question-no__link(href="#")= name
+          div.questions__return-layout(tabindex="0")
+            svg.questions__return-svg(width="24" height="39" role="img")
+              use(xlink:href="./img/sprite.svg#icon-arrow")
+            a.questions__return-text Я кликнул просто посмотреть
