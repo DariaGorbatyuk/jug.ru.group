@@ -1,16 +1,62 @@
+@keyframes gradient {
+  0% {
+    background-position: -26% -26%;
+  }
+  100% {
+    background-position: 256% 256%;
+  }
+}
+
 .header {
   background-image: url("../img/background.png");
   background-repeat: no-repeat;
-  background-size: 50% 77%;
+  background-size: 714px 611px;
   background-position: right bottom;
   font-family: $font;
   box-shadow: 0 4px 4px rgba($black, 0.25),
   0 4px 4px rgba($black, 0.25);
   padding-top: 148px;
   padding-bottom: 79px;
+  position: relative;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/background@2x.png");
+  }
+}
+
+.header__gradient {
+  position: absolute;
+  overflow: hidden;
+  max-width: 770px;
+  top: 0;
+  right: 0;
+  width: 55%;
+  height: 70%;
+  z-index: -1;
+  background-image: repeating-linear-gradient(45deg, $white, $white 80px, $black 80px, $black 160px);
+  background-size: 235%;
+  animation: gradient 15s linear infinite reverse;
+
+  &::before {
+    @include pseudo();
+    position: absolute;
+    top: -26%;
+    left: -76px;
+    width: 30%;
+    height: 70%;
+    background-color: $white;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    @include pseudo();
+    position: absolute;
+    transform: rotate(45deg);
+    background-color: white;
+    width: 65%;
+    height: 40%;
+    left: -22%;
+    bottom: -9%;
   }
 }
 
@@ -65,16 +111,27 @@
   margin-right: 20px;
   position: relative;
 
-  &::before{
+  &::before {
     @include pseudo();
-    @include size(52px, 52px);
-    background-image: url("../img/i-yes.png");
-    top: -51px;
     left: 50%;
     transform: translateX(-50%);
+  }
 
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/i-yes@2x.png");
+  &--buy {
+    &::before {
+      @include size(52px, 52px);
+      background-image: url("../img/i-yes.png");
+      top: -51px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/i-yes@2x.png");
+      }
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+      background-color: $yellow-active;
     }
   }
 
@@ -82,7 +139,7 @@
     background-color: $black;
     color: $white;
 
-    &::before{
+    &::before {
       @include size(44px, 44px);
       background-image: url("../img/i-no.png");
       top: -41px;
@@ -90,6 +147,12 @@
       @media (min-resolution: 2dppx) {
         background-image: url("../img/i-no@2x.png");
       }
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+      background-color: rgba($black, 0.8);
     }
   }
 }
