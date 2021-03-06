@@ -7,11 +7,10 @@ const newModal = modalQuestionsTemplate.cloneNode(true);
 const formSubscribe = newModal.querySelector('.form-subscribe')
 
 const onIndexReturn = (evt) => {
-  if (evt.key !== 'Escape' || evt.target.classList.contains('questions__box--m')) {
+  if (evt.key !== 'Escape' && !evt.target.classList.contains('questions') && !evt.target.classList.contains('questions__return-text')) {
     return;
   }
   evt.preventDefault();
-  console.log('work');
   body.classList.remove('overflow');
   document.querySelector('.questions--m').remove();
 }
@@ -23,6 +22,7 @@ const onlinksToModalClick = (evt) => {
   const returnToIndex = newModal.querySelector('.questions__return-text');
   returnToIndex.addEventListener('click', onIndexReturn);
   document.addEventListener('keydown', onIndexReturn);
+  newModal.addEventListener('click', onIndexReturn)
 }
 
 const onSubscribe = (evt) => {
