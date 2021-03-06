@@ -29,7 +29,7 @@ html(lang="ru")
                 h2.question-yes__header Я хочу знать, когда
                   br
                   | будет офлайн
-                form.question-yes__form.form-subscribe(method="post")
+                form.question-yes__form.form-subscribe(method="post" action="https://echo.htmlacademy.ru")
                   div.form-subscribe__inp-container
                     input#email(name="email" type="email" placeholder="Укажите email" required)
                     label.visually-hidden(for="email") Ваш email
@@ -48,4 +48,11 @@ html(lang="ru")
               svg.questions__return-svg(width="24" height="39" role="img")
                 use(xlink:href="./img/sprite.svg#icon-arrow")
               a.questions__return-text(href="index.html") Я кликнул просто посмотреть
+    template#thankyou
+      div.thankyou
+        div.tankyou__box
+          h2.thankyou__header Я хочу знать, когда
+            br
+            | будет офлайн
+          p.thankyou__text Спасибо, что подписались на нашу рассылку!
     script(src="js/script.js")
