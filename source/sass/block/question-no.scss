@@ -8,6 +8,11 @@
   min-height: 498px;
   border: 1px solid rgba($black, 0.1);
   border-radius: 20px;
+
+  @media (max-width: $m-end) {
+   order: 0;
+    margin-bottom: 70px;
+  }
 }
 
 .question-no__header {

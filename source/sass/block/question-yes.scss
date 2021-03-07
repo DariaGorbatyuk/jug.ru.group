@@ -6,6 +6,13 @@
   min-height: 498px;
   border: 1px solid rgba($black, 0.1);
   border-radius: 20px;
+
+  @media (max-width: $m-end) {
+    border: none;
+    order: 1;
+    padding-top: 0;
+    min-height: auto;
+  }
 }
 
 .question-yes__header {
@@ -32,6 +39,10 @@
       background-image: url("../img/i-yes@2x.png");
     }
   }
+
+  @media (max-width: $m-end) {
+    margin-bottom: 64px;
+  }
 }
 
 .question-yes__agreement {
@@ -52,5 +63,13 @@
       outline: none;
       color: rgba($black, 0.6);
     }
+  }
+}
+
+.question-yes__form {
+  margin-bottom: 100px;
+
+  @media (max-width: $m-end) {
+    margin-bottom: 20px;
   }
 }

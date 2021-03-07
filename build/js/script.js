@@ -6,8 +6,8 @@ const body = document.querySelector('body');
 const linksToModal = document.querySelectorAll('.header__link');
 const newModal = modalQuestionsTemplate.cloneNode(true);
 const formSubscribe = newModal.querySelector('.form-subscribe');
-const noList = newModal.querySelector('.question-no__list');
-console.log('work')
+const noList = newModal.querySelector('.question-no__list')
+
 const onIndexReturn = (modal, box, link, evt) => {
   if (evt.key !== 'Escape' && !evt.target.classList.contains(box) && !evt.target.classList.contains(link)) {
     return;
@@ -22,8 +22,8 @@ const onBadClick = (evt) => {
     return;
   }
   evt.preventDefault();
-  newModal.remove();
   const newBad = badTanplate.cloneNode(true);
+  newModal.remove();
   body.insertAdjacentElement('afterbegin', newBad);
   body.classList.add('overflow');
   document.addEventListener('keydown', onIndexReturn.bind(null, newBad, 'bad', 'bad'));
@@ -39,7 +39,7 @@ const onlinksToModalClick = (evt) => {
   document.addEventListener('keydown', onIndexReturn.bind(null, newModal, 'questions', 'questions__return-text'));
   newModal.addEventListener('click', onIndexReturn.bind(null, newModal, 'questions', 'questions__return-text'));
   formSubscribe.addEventListener('submit', onSubscribe);
-  noList.addEventListener('click', onBadClick);
+  noList.addEventListener('click', onBadClick)
 }
 
 const onSubscribe = (evt) => {

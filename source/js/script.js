@@ -1,13 +1,12 @@
 'use strict';
 const modalQuestionsTemplate = document.querySelector('#questions').content.querySelector('.questions');
 const thankYouTanplate = document.querySelector('#thankyou').content.querySelector('.thankyou');
-const badTanplate = document.querySelector('#bad').content.querySelector('.bad');
+const badTanplate = document.querySelector('#bad-modal').content.querySelector('.bad');
 const body = document.querySelector('body');
 const linksToModal = document.querySelectorAll('.header__link');
 const newModal = modalQuestionsTemplate.cloneNode(true);
 const formSubscribe = newModal.querySelector('.form-subscribe');
-const newBad = badTanplate.cloneNode(true);
-const noList = newBad.querySelector('.question-no__list')
+const noList = newModal.querySelector('.question-no__list')
 
 const onIndexReturn = (modal, box, link, evt) => {
   if (evt.key !== 'Escape' && !evt.target.classList.contains(box) && !evt.target.classList.contains(link)) {
@@ -23,6 +22,8 @@ const onBadClick = (evt) => {
     return;
   }
   evt.preventDefault();
+  const newBad = badTanplate.cloneNode(true);
+  newModal.remove();
   body.insertAdjacentElement('afterbegin', newBad);
   body.classList.add('overflow');
   document.addEventListener('keydown', onIndexReturn.bind(null, newBad, 'bad', 'bad'));

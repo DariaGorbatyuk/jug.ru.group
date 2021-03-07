@@ -13,6 +13,12 @@
   @media (min-resolution: 2dppx) {
     background-image: url("../img/background@2x.png");
   }
+
+  @media (max-width: $m-end) {
+    background-size: 429px 375px;
+    background-position: right 150px;
+    padding-top: 225px;
+  }
 }
 
 .header__gradient {
@@ -21,8 +27,8 @@
   max-width: 770px;
   top: 0;
   right: 0;
-  width: 55%;
-  height: 70%;
+  width: 770px;
+  height: 560px;
   z-index: -1;
   background-image: repeating-linear-gradient(45deg, $white, $white 80px, $black 80px, $black 160px);
   background-size: 235%;
@@ -49,6 +55,13 @@
     left: -22%;
     bottom: -9%;
   }
+
+  @media (max-width: $m-end) {
+    width: 454px;
+    height: 300px;
+    background-size: 256%;
+    animation: gradient-m 6s linear infinite reverse;
+  }
 }
 
 .header__logo {
@@ -65,6 +78,10 @@
   margin: 0;
   margin-bottom: 22px;
   width: 50%;
+
+  @media (max-width: $m-end) {
+    width: auto;
+  }
 }
 
 .header__desc {
@@ -78,6 +95,10 @@
   &:nth-last-of-type(1) {
     margin-bottom: 65px;
   }
+
+  @media (max-width: $m-end) {
+    width: auto;
+  }
 }
 
 .header__btns-container {
@@ -85,6 +106,10 @@
   display: flex;
   flex-wrap: wrap;
   width: 50%;
+
+  @media (max-width: $m-end) {
+    width: auto;
+  }
 }
 
 .header__link {
