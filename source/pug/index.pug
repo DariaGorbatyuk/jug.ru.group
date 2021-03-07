@@ -54,5 +54,14 @@ html(lang="ru")
           h2.thankyou__header Я хочу знать, когда
             br
             | будет офлайн
-          p.thankyou__text Спасибо, что подписались на нашу рассылку!
+          p.thankyou__text.thankyou-text
+            svg(width="50" height="50" role="img")
+              use(xlink:href="./img/sprite.svg#icon-thankyou-check")
+            |Спасибо, что подписались
+            br
+            | на нашу рассылку!
+    template#bad-modal
+      div.bad
+        div.bad__box.question-no
+          p.bad__text Спасибо, что поделились!
     script(src="js/script.js")

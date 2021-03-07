@@ -1,6 +1,11 @@
 .question-yes {
   font-family: $font;
   padding: 49px 4.2% 40px 2.3%;
+  width: 610px;
+  min-width: 280px;
+  min-height: 498px;
+  border: 1px solid rgba($black, 0.1);
+  border-radius: 20px;
 }
 
 .question-yes__header {

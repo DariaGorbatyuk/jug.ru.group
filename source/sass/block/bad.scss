@@ -1,0 +1,42 @@
+.bad {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba($black, 0.6);
+  z-index: 100;
+}
+
+.bad__box {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 140px 85px 40px 85px;
+}
+
+.bad__text {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1.3;
+  padding-top: 120px;
+  position: relative;
+  text-align: center;
+  margin: 0;
+
+  &::before {
+    @include pseudo();
+    @include size(100px, 100px);
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url("../img/thumb.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/thumb@2x.png");
+    }
+  }
+}

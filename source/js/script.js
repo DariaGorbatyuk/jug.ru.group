@@ -1,18 +1,32 @@
 'use strict';
 const modalQuestionsTemplate = document.querySelector('#questions').content.querySelector('.questions');
 const thankYouTanplate = document.querySelector('#thankyou').content.querySelector('.thankyou');
+const badTanplate = document.querySelector('#bad').content.querySelector('.bad');
 const body = document.querySelector('body');
 const linksToModal = document.querySelectorAll('.header__link');
 const newModal = modalQuestionsTemplate.cloneNode(true);
-const formSubscribe = newModal.querySelector('.form-subscribe')
+const formSubscribe = newModal.querySelector('.form-subscribe');
+const newBad = badTanplate.cloneNode(true);
+const noList = newBad.querySelector('.question-no__list')
 
-const onIndexReturn = (evt) => {
-  if (evt.key !== 'Escape' && !evt.target.classList.contains('questions') && !evt.target.classList.contains('questions__return-text')) {
+const onIndexReturn = (modal, box, link, evt) => {
+  if (evt.key !== 'Escape' && !evt.target.classList.contains(box) && !evt.target.classList.contains(link)) {
     return;
   }
   evt.preventDefault();
   body.classList.remove('overflow');
-  document.querySelector('.questions--m').remove();
+  modal.remove();
+  document.removeEventListener('keydown', onIndexReturn);
+}
+const onBadClick = (evt) => {
+  if(!evt.target.classList.contains('question-no__link')){
+    return;
+  }
+  evt.preventDefault();
+  body.insertAdjacentElement('afterbegin', newBad);
+  body.classList.add('overflow');
+  document.addEventListener('keydown', onIndexReturn.bind(null, newBad, 'bad', 'bad'));
+  newBad.addEventListener('click', onIndexReturn.bind(null, newBad, 'bad', 'bad'));
 }
 
 const onlinksToModalClick = (evt) => {
@@ -20,9 +34,11 @@ const onlinksToModalClick = (evt) => {
   body.insertAdjacentElement('afterbegin', newModal);
   body.classList.add('overflow');
   const returnToIndex = newModal.querySelector('.questions__return-text');
-  returnToIndex.addEventListener('click', onIndexReturn);
-  document.addEventListener('keydown', onIndexReturn);
-  newModal.addEventListener('click', onIndexReturn)
+  returnToIndex.addEventListener('click', onIndexReturn.bind(null, newModal, 'questions', 'questions__return-text'));
+  document.addEventListener('keydown', onIndexReturn.bind(null, newModal, 'questions', 'questions__return-text'));
+  newModal.addEventListener('click', onIndexReturn.bind(null, newModal, 'questions', 'questions__return-text'));
+  formSubscribe.addEventListener('submit', onSubscribe);
+  noList.addEventListener('click', onBadClick)
 }
 
 const onSubscribe = (evt) => {
@@ -30,9 +46,12 @@ const onSubscribe = (evt) => {
   newModal.remove();
   const newThankYou = thankYouTanplate.cloneNode(true);
   body.insertAdjacentElement('afterbegin', newThankYou);
+  body.classList.add('overflow');
+  document.addEventListener('keydown', onIndexReturn.bind(null, newThankYou, 'thankyou', 'thankyou'));
+  newThankYou.addEventListener('click', onIndexReturn.bind(null, newThankYou, 'thankyou', 'thankyou'));
 }
 
 linksToModal.forEach((link) => {
   link.addEventListener('click', onlinksToModalClick)
 });
-formSubscribe.addEventListener('submit', onSubscribe)
+
