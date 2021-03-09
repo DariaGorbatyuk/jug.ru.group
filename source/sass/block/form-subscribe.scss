@@ -36,6 +36,14 @@
     padding: 6px 30px 6px 52px;
   }
 
+  @media (max-width: $m-end) {
+    margin-right: 2.1%;
+    input {
+      width: 334px;
+      padding-left: 28px;
+    }
+  }
+
   @media (max-width: $s-end) {
     margin-right: 2.1%;
 

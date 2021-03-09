@@ -43,6 +43,11 @@
 
   @media (max-width: $m-end) {
     margin-bottom: 64px;
+    padding-left: 105px;
+
+    &::before{
+      left: 25px;
+    }
   }
 
   @media (max-width: $s-end) {
@@ -79,6 +84,10 @@
     }
   }
 
+  @media (max-width: $m-end) {
+    margin-left: 55px;
+  }
+
   @media (max-width: $s-end) {
     font-size: 10px;
     margin-left: 0;
@@ -90,9 +99,11 @@
 
   @media (max-width: $m-end) {
     margin-bottom: 20px;
+    margin-left: 53px;
   }
 
   @media (max-width: $s-end) {
     margin-bottom: 17px;
+    margin-left: 0;
   }
 }

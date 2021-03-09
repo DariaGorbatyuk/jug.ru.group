@@ -16,7 +16,7 @@
 
   @media (max-width: $m-end) {
     background-size: 429px 375px;
-    background-position: right 150px;
+    background-position: right 92px;
     padding-top: 225px;
   }
 
@@ -65,8 +65,16 @@
   @media (max-width: $m-end) {
     width: 454px;
     height: 300px;
-    background-size: 256%;
+    background-size: 262%;
+    background-image: repeating-linear-gradient(45deg, $white, $white 50px, $black 50px, $black 100px);
     animation: gradient-m 6s linear infinite reverse;
+
+    &::before{
+      top: -200px;
+      left: -100px;
+      width: 200px;
+      height: 400px;
+    }
   }
 
   @media (max-width: $s-end) {
@@ -88,6 +96,10 @@
   display: block;
   margin-bottom: 53px;
   margin-left: 3px;
+
+  @media (max-width: $m-end) {
+    margin-bottom: 47px;
+  }
 
   @media (max-width: $s-end) {
     margin-bottom: 27px;
@@ -114,6 +126,7 @@
   @media (max-width: $m-end) {
     width: auto;
     font-size: 36px;
+    margin-bottom: 19px;
   }
 
   @media (max-width: $s-end) {
@@ -136,10 +149,18 @@
 
   @media (max-width: $m-end) {
     width: auto;
+    margin-bottom: 11px;
+    font-size: 16px;
+    padding-right: 192px;
+
+    &:nth-last-of-type(1) {
+      margin-bottom: 28px;
+    }
   }
 
   @media (max-width: $s-end) {
     font-size: 12px;
+    padding: 0;
 
     &:nth-last-of-type(1) {
       margin-bottom: 24px;
@@ -235,6 +256,8 @@
 
   @media (max-width: $m-end) {
     width: 203px;
+    font-size: 14px;
+    padding: 16px 0;
   }
 
   @media (max-width: $s-end) {
