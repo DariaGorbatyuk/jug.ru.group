@@ -19,6 +19,12 @@
     background-position: right 150px;
     padding-top: 225px;
   }
+
+  @media (max-width: $s-end) {
+    background-size: 270px 242px;
+    background-position: right 56px;
+    padding-top: 233px;
+  }
 }
 
 .header__gradient {
@@ -62,12 +68,38 @@
     background-size: 256%;
     animation: gradient-m 6s linear infinite reverse;
   }
+
+  @media (max-width: $s-end) {
+    width: 256px;
+    height: 146px;
+    background-image: repeating-linear-gradient(45deg, $white, $white 30px, $black 30px, $black 60px);
+    animation: gradient-s 4s linear infinite reverse;
+
+    &::before {
+      top: -100px;
+      left: -24px;
+      height: 200px;
+      width: 100px;
+    }
+  }
 }
 
 .header__logo {
   display: block;
   margin-bottom: 53px;
   margin-left: 3px;
+
+  @media (max-width: $s-end) {
+    margin-bottom: 27px;
+    margin-left: 0;
+  }
+}
+
+.header__svg {
+  @media (max-width: $s-end) {
+    width: 111px;
+    height: 37px;
+  }
 }
 
 .header__slogan {
@@ -81,6 +113,12 @@
 
   @media (max-width: $m-end) {
     width: auto;
+    font-size: 36px;
+  }
+
+  @media (max-width: $s-end) {
+    font-size: 28px;
+    margin-bottom: 20px;
   }
 }
 
@@ -99,6 +137,14 @@
   @media (max-width: $m-end) {
     width: auto;
   }
+
+  @media (max-width: $s-end) {
+    font-size: 12px;
+
+    &:nth-last-of-type(1) {
+      margin-bottom: 24px;
+    }
+  }
 }
 
 .header__btns-container {
@@ -109,6 +155,10 @@
 
   @media (max-width: $m-end) {
     width: auto;
+  }
+
+  @media (max-width: $s-end) {
+    padding-top: 36px;
   }
 }
 
@@ -131,6 +181,7 @@
     @include pseudo();
     left: 50%;
     transform: translateX(-50%);
+    background-repeat: no-repeat;
   }
 
   &:hover,
@@ -175,6 +226,37 @@
     &:focus {
       outline: none;
       background-color: rgba($black, 0.8);
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media (max-width: $m-end) {
+    width: 203px;
+  }
+
+  @media (max-width: $s-end) {
+    font-size: 11px;
+    width: 133px;
+    padding: 13px 0;
+    border-radius: 7px;
+    margin-right: 14px;
+
+    &--buy {
+      &::before {
+        @include square(34px);
+        background-size: 34px, 34px;
+        top: -35px;
+      }
+    }
+    &--refuse {
+      &:before{
+        @include square(28px);
+        background-size: 28px, 28px;
+        top: -28px;
+      }
     }
   }
 }

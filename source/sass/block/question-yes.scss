@@ -10,8 +10,9 @@
   @media (max-width: $m-end) {
     border: none;
     order: 1;
-    padding-top: 0;
     min-height: auto;
+    padding: 0;
+    margin-bottom: 19px;
   }
 }
 
@@ -43,6 +44,19 @@
   @media (max-width: $m-end) {
     margin-bottom: 64px;
   }
+
+  @media (max-width: $s-end) {
+    font-size: 16px;
+    padding-left: 72px;
+    margin-bottom: 36px;
+
+    &::before {
+      @include square(40px);
+      background-size: 40px, 40px;
+      left: 23px;
+      top: 0;
+    }
+  }
 }
 
 .question-yes__agreement {
@@ -64,6 +78,11 @@
       color: rgba($black, 0.6);
     }
   }
+
+  @media (max-width: $s-end) {
+    font-size: 10px;
+    margin-left: 0;
+  }
 }
 
 .question-yes__form {
@@ -71,5 +90,9 @@
 
   @media (max-width: $m-end) {
     margin-bottom: 20px;
+  }
+
+  @media (max-width: $s-end) {
+    margin-bottom: 17px;
   }
 }

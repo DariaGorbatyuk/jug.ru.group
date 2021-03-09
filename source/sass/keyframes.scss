@@ -15,6 +15,15 @@
   }
 }
 
+@keyframes gradient-s {
+  0% {
+    background-position: 30% 30%;
+  }
+  100% {
+    background-position: 93.5% 93.5%;
+  }
+}
+
 @keyframes modal {
   0%{
     top: 0;

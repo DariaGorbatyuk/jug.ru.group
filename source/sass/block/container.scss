@@ -3,4 +3,12 @@
   max-width: $l-end;
   padding: 0 80px;
   margin: 0 auto;
+
+  @media (max-width: $m-end) {
+    padding: 0 60px;
+  }
+
+  @media (max-width: $s-end) {
+    padding: 0 20px;
+  }
 }
