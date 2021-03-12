@@ -16,14 +16,16 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: min-content 60px;
   align-items: start;
+  margin-bottom: 149px;
 
   @media (max-width: $m-end) {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, min-content);
+    margin-bottom: 52px;
   }
 
   @media (max-width: $s-end) {
-
+    margin-bottom: 29px;
   }
 }
 
@@ -99,4 +101,13 @@
     font-size: 11px;
     width: 160px;
   }
+}
+
+.full-pass__benefits{
+  margin: 0 7%;
+
+  @media (max-width: $m-end) {
+    margin: 0 5%;
+  }
+
 }
