@@ -19,6 +19,46 @@ html(lang="ru")
         div.header__btns-container
           a.header__link.header__link--buy(href="questions.html") Купить билет
           a.header__link.header__link--refuse(href="questions.html") Послать в жопу
+    main
+      section.full-pass
+        div.container
+          div.full-pass__about
+            h2.full-pass__heading Все 7 конференций в одном билете
+            div.full-pass__img-container
+              img(src="./img/fullpass_ticket.jpg" alt="Билет на 7 конференций" srcset="./img/fullpass_ticket@2x.jpg" width="610" height="272")
+            a.full-pass__buy(href="#") Купить Full Pass
+          ul.full-pass__benefits.benefits
+            li.benefits__item
+              span.benefits__number 7
+              span.benefits__text направлений
+            li.benefits__item
+              span.benefits__number 200
+              span.benefits__text спикеров
+            li.benefits__item
+              span.benefits__number 250
+              span.benefits__text докладов
+            li.benefits__item
+              span.benefits__number 500+
+              span.benefits__text часов контента
+      //section.speakers
+      //  h2.speakers__heading Спикеры
+      //  ul.speakers__list
+      //    li.speakers__item.speaker-card
+      //      div.speaker-card__img-conatiner
+      //        img.speaker-card__img(src="./img/speaker1.jpg" alt="Miguel de Icaza")
+      //      h3.speaker-card__heading Miguel de Icaza
+      //      a(href="#" aria-label="Перейти в твиттер")
+      //        svg.speaker-card__twitter(width="25" height="35" role="img")
+      //          use(xlink:href="./img/sprite.svg#icon-tw")
+      //      p.speaker-card__short-text Основатель проектов GNOME и Mono
+      //      button.speaker-card__details(type="button")
+      //  a.speakers__more(href="#")
+      //section.conferences
+      //  h2.conferences__heading Ближайшие конференции
+      //  ul.conferences__list
+      //    li.conferences__item.conferences-card
+      //      h3.conferences-card__heading Heisenbug 2020 Moscow
+    footer
     template#questions
       div.questions.questions--m
         div.questions__box.questions__box--m

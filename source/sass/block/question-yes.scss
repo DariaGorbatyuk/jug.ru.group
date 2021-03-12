@@ -45,7 +45,7 @@
     margin-bottom: 64px;
     padding-left: 105px;
 
-    &::before{
+    &::before {
       left: 25px;
     }
   }
@@ -61,6 +61,20 @@
       left: 23px;
       top: 0;
     }
+  }
+}
+
+.question-yes__form {
+  margin-bottom: 100px;
+
+  @media (max-width: $m-end) {
+    margin-bottom: 20px;
+    margin-left: 53px;
+  }
+
+  @media (max-width: $s-end) {
+    margin-bottom: 17px;
+    margin-left: 0;
   }
 }
 
@@ -90,20 +104,6 @@
 
   @media (max-width: $s-end) {
     font-size: 10px;
-    margin-left: 0;
-  }
-}
-
-.question-yes__form {
-  margin-bottom: 100px;
-
-  @media (max-width: $m-end) {
-    margin-bottom: 20px;
-    margin-left: 53px;
-  }
-
-  @media (max-width: $s-end) {
-    margin-bottom: 17px;
     margin-left: 0;
   }
 }

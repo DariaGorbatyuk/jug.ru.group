@@ -21,8 +21,7 @@
     background-color: $white;
     width: 100%;
     min-height: 803px;
-    top: 0;
-    //animation: modal 700ms ease-in forwards;
+    animation: modal 700ms ease-in forwards;
   }
 
   @media (max-width: $m-end) {
