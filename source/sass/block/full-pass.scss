@@ -1,6 +1,10 @@
 .full-pass {
   color: $black;
   padding-top: 61px;
+
+  @media (max-width: $m-end) {
+    padding-top: 1px;
+  }
 }
 
 .full-pass__about {
@@ -8,6 +12,11 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: min-content 60px;
   align-items: start;
+
+  @media (max-width: $m-end) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, min-content);
+  }
 }
 
 .full-pass__heading {
@@ -18,12 +27,35 @@
   margin: 0;
   margin-top: 36px;
   padding-right: 100px;
+
+  @media (max-width: $m-end) {
+    font-size: 36px;
+    margin-top: 0;
+    padding-right: 235px;
+    margin-bottom: 40px;
+  }
 }
 
 .full-pass__img-container {
   grid-row: 1/-1;
   grid-column: 2/-1;
   justify-self: right;
+  overflow: hidden;
+
+  img {
+    object-fit: contain;
+    height: 100%;
+  }
+
+  @media (max-width: $m-end) {
+    grid-row: auto;
+    grid-column: auto;
+    width: 466px;
+    height: 208px;
+    justify-self: center;
+    align-self: start;
+    margin-bottom: 50px;
+  }
 }
 
 .full-pass__buy {
@@ -38,4 +70,8 @@
   line-height: 1.22;
   padding: 12px 0;
   text-align: center;
+
+  @media (max-width: $m-end) {
+    justify-self: center;
+  }
 }
