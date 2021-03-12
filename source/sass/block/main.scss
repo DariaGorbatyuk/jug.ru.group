@@ -1,0 +1,11 @@
+.main__full-pass {
+  margin-bottom: 118px;
+
+  @media (max-width: $m-end) {
+    margin-bottom: 60px;
+  }
+
+  @media (max-width: $m-end) {
+    margin-bottom: 17px;
+  }
+}

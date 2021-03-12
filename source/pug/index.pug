@@ -19,8 +19,8 @@ html(lang="ru")
         div.header__btns-container
           a.header__link.header__link--buy(href="questions.html") Купить билет
           a.header__link.header__link--refuse(href="questions.html") Послать в жопу
-    main
-      section.full-pass
+    main.main
+      section.main__full-pass.full-pass
         div.container
           div.full-pass__about
             h2.full-pass__heading Все 7 конференций в одном билете
@@ -40,24 +40,121 @@ html(lang="ru")
             li.benefits__item
               span.benefits__number 500+
               span.benefits__text часов контента
-      //section.speakers
-      //  h2.speakers__heading Спикеры
-      //  ul.speakers__list
-      //    li.speakers__item.speaker-card
-      //      div.speaker-card__img-conatiner
-      //        img.speaker-card__img(src="./img/speaker1.jpg" alt="Miguel de Icaza")
-      //      h3.speaker-card__heading Miguel de Icaza
-      //      a(href="#" aria-label="Перейти в твиттер")
-      //        svg.speaker-card__twitter(width="25" height="35" role="img")
-      //          use(xlink:href="./img/sprite.svg#icon-tw")
-      //      p.speaker-card__short-text Основатель проектов GNOME и Mono
-      //      button.speaker-card__details(type="button")
-      //  a.speakers__more(href="#")
-      //section.conferences
-      //  h2.conferences__heading Ближайшие конференции
-      //  ul.conferences__list
-      //    li.conferences__item.conferences-card
-      //      h3.conferences-card__heading Heisenbug 2020 Moscow
+      section.speakers
+        div.container
+          h2.speakers__heading Спикеры
+          ul.speakers__list
+            li.speakers__item.speaker-card
+              div.speaker-card__img-conatiner
+                img.speaker-card__img(src="./img/speaker1.jpg" alt="Miguel de Icaza" width="295" height="219")
+              svg.speaker-card__conf(width="83" height="31" role="img")
+                title DOT NEXT
+                use(xlink:href="./img/sprite.svg#icon-dotnext")
+              div.speaker-card__layout
+                h3.speaker-card__heading Miguel de Icaza
+                a.speaker-card__twitter(href="#" aria-label="Перейти в твиттер")
+                  svg(width="25" height="35" role="img")
+                    use(xlink:href="./img/sprite.svg#icon-tw")
+              p.speaker-card__short-text Основатель проектов GNOME и Mono
+              button.speaker-card__details(type="button") Подробнее
+            li.speakers__item.speaker-card
+              div.speaker-card__img-conatiner
+                img.speaker-card__img(src="./img/speaker2.jpg" alt="Maoni Stephens " width="295" height="219")
+              svg.speaker-card__conf(width="83" height="31" role="img")
+                title DOT NEXT
+                use(xlink:href="./img/sprite.svg#icon-dotnext")
+              div.speaker-card__layout
+                h3.speaker-card__heading Maoni Stephens
+                a.speaker-card__twitter(href="#" aria-label="Перейти в твиттер")
+                  svg(width="25" height="35" role="img")
+                    use(xlink:href="./img/sprite.svg#icon-tw")
+              p.speaker-card__short-text Архитектор и главный разработчик .NET GC
+              button.speaker-card__details(type="button") Подробнее
+            li.speakers__item.speaker-card
+              div.speaker-card__img-conatiner
+                img.speaker-card__img(src="./img/speaker3.jpg" alt="Дэн Абрамов" width="295" height="219")
+              svg.speaker-card__conf(width="56" height="44" role="img")
+                title DOT NEXT
+                use(xlink:href="./img/sprite.svg#icon-holyjs")
+              div.speaker-card__layout
+                h3.speaker-card__heading Дэн Абрамов
+                a.speaker-card__twitter(href="#" aria-label="Перейти в твиттер")
+                  svg(width="25" height="35" role="img")
+                    use(xlink:href="./img/sprite.svg#icon-tw")
+              p.speaker-card__short-text Один из главных разработчиков Реакта
+              button.speaker-card__details(type="button") Подробнее
+            li.speakers__item.speaker-card
+              div.speaker-card__img-conatiner
+                img.speaker-card__img(src="./img/speaker4.jpg" alt="James Whittaker" width="295" height="219")
+              svg.speaker-card__conf(width="96" height="18" role="img")
+                title DOT NEXT
+                use(xlink:href="./img/sprite.svg#icon-heisenbug")
+              div.speaker-card__layout
+                h3.speaker-card__heading James Whittaker
+                a.speaker-card__twitter(href="#" aria-label="Перейти в твиттер")
+                  svg(width="25" height="35" role="img")
+                    use(xlink:href="./img/sprite.svg#icon-tw")
+              p.speaker-card__short-text Автор книги «Как тестируют в Google»
+              button.speaker-card__details(type="button") Подробнее
+            li.speakers__item.speaker-card
+              div.speaker-card__img-conatiner
+                img.speaker-card__img(src="./img/speaker5.jpg" alt="Matt Godbolt " width="295" height="219")
+              svg.speaker-card__conf(width="63" height="37" role="img")
+                title C++
+                use(xlink:href="./img/sprite.svg#icon-c++")
+              div.speaker-card__layout
+                h3.speaker-card__heading Matt Godbolt
+                a.speaker-card__twitter(href="#" aria-label="Перейти в твиттер")
+                  svg(width="25" height="35" role="img")
+                    use(xlink:href="./img/sprite.svg#icon-tw")
+              p.speaker-card__short-text Автор и создатель Compiler explorer
+              button.speaker-card__details(type="button") Подробнее
+            li.speakers__item.speaker-card
+              div.speaker-card__img-conatiner
+                img.speaker-card__img(src="./img/speaker6.jpg" alt="Евгений Борисов" width="295" height="219")
+              svg.speaker-card__conf(width="70" height="21" role="img")
+                title Joker
+                use(xlink:href="./img/sprite.svg#icon-joker")
+              div.speaker-card__layout
+                h3.speaker-card__heading Евгений Борисов
+                a.speaker-card__twitter(href="#" aria-label="Перейти в твиттер")
+                  svg(width="25" height="35" role="img")
+                    use(xlink:href="./img/sprite.svg#icon-tw")
+              p.speaker-card__short-text Известный Spring-потрошитель
+              button.speaker-card__details(type="button") Подробнее
+            li.speakers__item.speaker-card
+              div.speaker-card__img-conatiner
+                img.speaker-card__img(src="./img/speaker7.jpg" alt="Patricia Aas" width="295" height="219")
+              svg.speaker-card__conf(width="63" height="37" role="img")
+                title C++
+                use(xlink:href="./img/sprite.svg#icon-c++")
+              div.speaker-card__layout
+                h3.speaker-card__heading Patricia Aas
+                a.speaker-card__twitter(href="#" aria-label="Перейти в твиттер")
+                  svg(width="25" height="35" role="img")
+                    use(xlink:href="./img/sprite.svg#icon-tw")
+              p.speaker-card__short-text Программист C++ и основатель TurtleSec
+              button.speaker-card__details(type="button") Подробнее
+            li.speakers__item.speaker-card
+              div.speaker-card__img-conatiner
+                img.speaker-card__img(src="./img/speaker8.jpg" alt="Patrick Debois" width="295" height="219")
+              svg.speaker-card__conf(width="68" height="43" role="img")
+                title DEVOOPS
+                use(xlink:href="./img/sprite.svg#icon-devoops-logo")
+              div.speaker-card__layout
+                h3.speaker-card__heading Patrick Debois
+                a.speaker-card__twitter(href="#" aria-label="Перейти в твиттер")
+                  svg(width="25" height="35" role="img")
+                    use(xlink:href="./img/sprite.svg#icon-tw")
+              p.speaker-card__short-text Ввел сам термин Devops
+              button.speaker-card__details(type="button") Подробнее
+          a.speakers__more(href="#") Показать ещё!
+          a.speakers__more.speakers__more--yes(href="#") Убедили, куплю!
+        section.conferences
+          h2.conferences__heading Ближайшие конференции
+          ul.conferences__list
+            li.conferences__item.conferences-card
+              h3.conferences-card__heading Heisenbug 2020 Moscow
     footer
     template#questions
       div.questions.questions--m

@@ -24,8 +24,8 @@
 				<div class="header__btns-container"><a class="header__link header__link--buy" href="questions.html">Купить билет</a><a class="header__link header__link--refuse" href="questions.html">Послать в жопу</a></div>
 			</div>
 		</header>
-		<main>
-			<section class="full-pass">
+		<main class="main">
+			<section class="main__full-pass full-pass">
 				<div class="container">
 					<div class="full-pass__about">
 						<h2 class="full-pass__heading">Все 7 конференций в одном билете</h2>
@@ -39,24 +39,141 @@
 					</ul>
 				</div>
 			</section>
-			<!--section.speakers-->
-			<!--  h2.speakers__heading Спикеры-->
-			<!--  ul.speakers__list-->
-			<!--    li.speakers__item.speaker-card-->
-			<!--      div.speaker-card__img-conatiner-->
-			<!--        img.speaker-card__img(src="./img/speaker1.jpg" alt="Miguel de Icaza")-->
-			<!--      h3.speaker-card__heading Miguel de Icaza-->
-			<!--      a(href="#" aria-label="Перейти в твиттер")-->
-			<!--        svg.speaker-card__twitter(width="25" height="35" role="img")-->
-			<!--          use(xlink:href="./img/sprite.svg#icon-tw")-->
-			<!--      p.speaker-card__short-text Основатель проектов GNOME и Mono-->
-			<!--      button.speaker-card__details(type="button")-->
-			<!--  a.speakers__more(href="#")-->
-			<!--section.conferences-->
-			<!--  h2.conferences__heading Ближайшие конференции-->
-			<!--  ul.conferences__list-->
-			<!--    li.conferences__item.conferences-card-->
-			<!--      h3.conferences-card__heading Heisenbug 2020 Moscow-->
+			<section class="speakers">
+				<div class="container">
+					<h2 class="speakers__heading">Спикеры</h2>
+					<ul class="speakers__list">
+						<li class="speakers__item speaker-card">
+							<div class="speaker-card__img-conatiner"><img class="speaker-card__img" src="./img/speaker1.jpg" alt="Miguel de Icaza" width="295" height="219"></div>
+							<svg class="speaker-card__conf" width="83" height="31" role="img">
+								<title>DOT NEXT</title>
+								<use xlink:href="./img/sprite.svg#icon-dotnext"></use>
+							</svg>
+							<div class="speaker-card__layout">
+								<h3 class="speaker-card__heading">Miguel de Icaza</h3><a class="speaker-card__twitter" href="#" aria-label="Перейти в твиттер">
+									<svg width="25" height="35" role="img">
+										<use xlink:href="./img/sprite.svg#icon-tw"></use>
+									</svg></a>
+							</div>
+							<p class="speaker-card__short-text">Основатель проектов GNOME и Mono</p>
+							<button class="speaker-card__details" type="button">Подробнее</button>
+						</li>
+						<li class="speakers__item speaker-card">
+							<div class="speaker-card__img-conatiner"><img class="speaker-card__img" src="./img/speaker2.jpg" alt="Maoni Stephens " width="295" height="219"></div>
+							<svg class="speaker-card__conf" width="83" height="31" role="img">
+								<title>DOT NEXT</title>
+								<use xlink:href="./img/sprite.svg#icon-dotnext"></use>
+							</svg>
+							<div class="speaker-card__layout">
+								<h3 class="speaker-card__heading">Maoni Stephens</h3><a class="speaker-card__twitter" href="#" aria-label="Перейти в твиттер">
+									<svg width="25" height="35" role="img">
+										<use xlink:href="./img/sprite.svg#icon-tw"></use>
+									</svg></a>
+							</div>
+							<p class="speaker-card__short-text">Архитектор и главный разработчик .NET GC</p>
+							<button class="speaker-card__details" type="button">Подробнее</button>
+						</li>
+						<li class="speakers__item speaker-card">
+							<div class="speaker-card__img-conatiner"><img class="speaker-card__img" src="./img/speaker3.jpg" alt="Дэн Абрамов" width="295" height="219"></div>
+							<svg class="speaker-card__conf" width="56" height="44" role="img">
+								<title>DOT NEXT</title>
+								<use xlink:href="./img/sprite.svg#icon-holyjs"></use>
+							</svg>
+							<div class="speaker-card__layout">
+								<h3 class="speaker-card__heading">Дэн Абрамов</h3><a class="speaker-card__twitter" href="#" aria-label="Перейти в твиттер">
+									<svg width="25" height="35" role="img">
+										<use xlink:href="./img/sprite.svg#icon-tw"></use>
+									</svg></a>
+							</div>
+							<p class="speaker-card__short-text">Один из главных разработчиков Реакта</p>
+							<button class="speaker-card__details" type="button">Подробнее</button>
+						</li>
+						<li class="speakers__item speaker-card">
+							<div class="speaker-card__img-conatiner"><img class="speaker-card__img" src="./img/speaker4.jpg" alt="James Whittaker" width="295" height="219"></div>
+							<svg class="speaker-card__conf" width="96" height="18" role="img">
+								<title>DOT NEXT</title>
+								<use xlink:href="./img/sprite.svg#icon-heisenbug"></use>
+							</svg>
+							<div class="speaker-card__layout">
+								<h3 class="speaker-card__heading">James Whittaker</h3><a class="speaker-card__twitter" href="#" aria-label="Перейти в твиттер">
+									<svg width="25" height="35" role="img">
+										<use xlink:href="./img/sprite.svg#icon-tw"></use>
+									</svg></a>
+							</div>
+							<p class="speaker-card__short-text">Автор книги «Как тестируют в Google»</p>
+							<button class="speaker-card__details" type="button">Подробнее</button>
+						</li>
+						<li class="speakers__item speaker-card">
+							<div class="speaker-card__img-conatiner"><img class="speaker-card__img" src="./img/speaker5.jpg" alt="Matt Godbolt " width="295" height="219"></div>
+							<svg class="speaker-card__conf" width="63" height="37" role="img">
+								<title>C++</title>
+								<use xlink:href="./img/sprite.svg#icon-c++"></use>
+							</svg>
+							<div class="speaker-card__layout">
+								<h3 class="speaker-card__heading">Matt Godbolt</h3><a class="speaker-card__twitter" href="#" aria-label="Перейти в твиттер">
+									<svg width="25" height="35" role="img">
+										<use xlink:href="./img/sprite.svg#icon-tw"></use>
+									</svg></a>
+							</div>
+							<p class="speaker-card__short-text">Автор и создатель Compiler explorer</p>
+							<button class="speaker-card__details" type="button">Подробнее</button>
+						</li>
+						<li class="speakers__item speaker-card">
+							<div class="speaker-card__img-conatiner"><img class="speaker-card__img" src="./img/speaker6.jpg" alt="Евгений Борисов" width="295" height="219"></div>
+							<svg class="speaker-card__conf" width="70" height="21" role="img">
+								<title>Joker</title>
+								<use xlink:href="./img/sprite.svg#icon-joker"></use>
+							</svg>
+							<div class="speaker-card__layout">
+								<h3 class="speaker-card__heading">Евгений Борисов</h3><a class="speaker-card__twitter" href="#" aria-label="Перейти в твиттер">
+									<svg width="25" height="35" role="img">
+										<use xlink:href="./img/sprite.svg#icon-tw"></use>
+									</svg></a>
+							</div>
+							<p class="speaker-card__short-text">Известный Spring-потрошитель</p>
+							<button class="speaker-card__details" type="button">Подробнее</button>
+						</li>
+						<li class="speakers__item speaker-card">
+							<div class="speaker-card__img-conatiner"><img class="speaker-card__img" src="./img/speaker7.jpg" alt="Patricia Aas" width="295" height="219"></div>
+							<svg class="speaker-card__conf" width="63" height="37" role="img">
+								<title>C++</title>
+								<use xlink:href="./img/sprite.svg#icon-c++"></use>
+							</svg>
+							<div class="speaker-card__layout">
+								<h3 class="speaker-card__heading">Patricia Aas</h3><a class="speaker-card__twitter" href="#" aria-label="Перейти в твиттер">
+									<svg width="25" height="35" role="img">
+										<use xlink:href="./img/sprite.svg#icon-tw"></use>
+									</svg></a>
+							</div>
+							<p class="speaker-card__short-text">Программист C++ и основатель TurtleSec</p>
+							<button class="speaker-card__details" type="button">Подробнее</button>
+						</li>
+						<li class="speakers__item speaker-card">
+							<div class="speaker-card__img-conatiner"><img class="speaker-card__img" src="./img/speaker8.jpg" alt="Patrick Debois" width="295" height="219"></div>
+							<svg class="speaker-card__conf" width="68" height="43" role="img">
+								<title>DEVOOPS</title>
+								<use xlink:href="./img/sprite.svg#icon-devoops-logo"></use>
+							</svg>
+							<div class="speaker-card__layout">
+								<h3 class="speaker-card__heading">Patrick Debois</h3><a class="speaker-card__twitter" href="#" aria-label="Перейти в твиттер">
+									<svg width="25" height="35" role="img">
+										<use xlink:href="./img/sprite.svg#icon-tw"></use>
+									</svg></a>
+							</div>
+							<p class="speaker-card__short-text">Ввел сам термин Devops</p>
+							<button class="speaker-card__details" type="button">Подробнее</button>
+						</li>
+					</ul><a class="speakers__more" href="#">Показать ещё!</a><a class="speakers__more speakers__more--yes" href="#">Убедили, куплю!</a>
+				</div>
+				<section class="conferences">
+					<h2 class="conferences__heading">Ближайшие конференции</h2>
+					<ul class="conferences__list">
+						<li class="conferences__item conferences-card">
+							<h3 class="conferences-card__heading">Heisenbug 2020 Moscow</h3>
+						</li>
+					</ul>
+				</section>
+			</section>
 		</main>
 		<footer></footer>
 		<template id="questions">

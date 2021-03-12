@@ -1,0 +1,105 @@
+.speaker-card {
+  width: 295px;
+  position: relative;
+  color: $black;
+  display: flex;
+  flex-direction: column;
+  min-height: 368px;
+
+  @media (max-width: $m-end) {
+    width: 315px;
+    min-height: 381px;
+  }
+
+  @media (max-width: $s-end) {
+    width: 320px;
+    min-height: 337px;
+  }
+}
+
+.speaker-card__img-conatiner {
+  overflow: hidden;
+  border: 1px solid white;
+  border-radius: 20px 20px 0 0;
+  margin-bottom: 7px;
+
+  @media (max-width: $m-end) {
+    margin-bottom: 9px;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @media (max-width: $s-end) {
+    margin-bottom: 7px;
+  }
+}
+
+.speaker-card__conf {
+  position: absolute;
+  top: 13px;
+  right: 9px;
+  z-index: 1;
+}
+
+.speaker-card__layout {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3px;
+}
+
+.speaker-card__heading {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.17;
+  margin: 0;
+  margin-right: 14px;
+
+  @media (max-width: $m-end) {
+    font-size: 18px;
+  }
+
+  @media (max-width: $s-end) {
+   font-size: 16px;
+  }
+}
+
+.speaker-card__twitter {
+}
+
+.speaker-card__short-text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  margin-bottom: 20px;
+
+  @media (max-width: $s-end) {
+    font-size: 12px;
+  }
+}
+
+.speaker-card__details {
+  border: 1px solid rgba($black, 0.5);
+  border-radius: 24px;
+  width: 121px;
+  font-size: 14px;
+  line-height: 1.22;
+  text-align: center;
+  color: rgba($black, 0.7);
+  padding: 11px 0;
+  background-color: transparent;
+  margin-top: auto;
+
+  @media (max-width: $m-end) {
+    padding: 9px 0;
+  }
+
+  @media (max-width: $s-end) {
+    width: 106px;
+    font-size: 11px;
+  }
+}
