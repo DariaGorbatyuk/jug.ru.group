@@ -16,6 +16,7 @@
     background-size: 429px 375px;
     background-position: right 92px;
     padding-top: 225px;
+    padding-bottom: 0;
   }
 
   @media (max-width: $s-end) {
@@ -161,7 +162,7 @@
     padding: 0;
 
     &:nth-last-of-type(1) {
-      margin-bottom: 24px;
+      margin-bottom: 18px;
     }
   }
 }

@@ -3,7 +3,11 @@
   padding-top: 61px;
 
   @media (max-width: $m-end) {
-    padding-top: 1px;
+    padding-top: 79px;
+  }
+
+  @media (max-width: $s-end) {
+    padding-top: 49px;
   }
 }
 
@@ -16,6 +20,10 @@
   @media (max-width: $m-end) {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, min-content);
+  }
+
+  @media (max-width: $s-end) {
+
   }
 }
 
@@ -33,6 +41,12 @@
     margin-top: 0;
     padding-right: 235px;
     margin-bottom: 40px;
+  }
+
+  @media (max-width: $s-end) {
+    font-size: 20px;
+    padding-right: 53px;
+    margin-bottom: 24px;
   }
 }
 
@@ -56,6 +70,12 @@
     align-self: start;
     margin-bottom: 50px;
   }
+
+  @media (max-width: $s-end) {
+    width: 281px;
+    height: 126px;
+    margin-bottom: 29px;
+  }
 }
 
 .full-pass__buy {
@@ -73,5 +93,10 @@
 
   @media (max-width: $m-end) {
     justify-self: center;
+  }
+
+  @media (max-width: $s-end) {
+    font-size: 11px;
+    width: 160px;
   }
 }
