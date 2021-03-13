@@ -1,6 +1,10 @@
 .conferences {
   padding-top: 20px;
   overflow-x: hidden;
+
+  @media (max-width: $m-end) {
+
+  }
 }
 
 .conferences__list{
@@ -10,9 +14,17 @@
   margin: 0;
   padding: 0;
   margin-right: -20px;
+
+  @media (max-width: $m-end) {
+
+  }
 }
 
 .conferences__item{
   margin-right: 20px;
   margin-bottom: 22px;
+
+  @media (max-width: $m-end) {
+    margin-bottom: 23px;
+  }
 }

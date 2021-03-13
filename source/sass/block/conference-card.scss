@@ -20,12 +20,26 @@
     line-height: 1.5;
     padding-left: 38px;
   }
+
+  @media (max-width: $m-end) {
+    width: 314px;
+    padding-top: 51px;
+    padding-bottom: 16px;
+
+    &::before {
+      font-size: 10px;
+    }
+  }
 }
 
 .conference-card__img {
   display: block;
   margin: 0 auto;
   margin-bottom: 31px;
+
+  @media (max-width: $m-end) {
+    margin-bottom: 34px;
+  }
 }
 
 .conferences-card__heading {
@@ -34,6 +48,10 @@
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 8px;
+
+  @media (max-width: $m-end) {
+    margin-bottom: 3px;
+  }
 }
 
 .conferences-card__text {
@@ -43,6 +61,12 @@
   color: rgba($black, 0.7);
   padding-right: 18px;
   margin-bottom: 11px;
+
+  @media (max-width: $m-end) {
+    font-size: 12px;
+    padding-right: 80px;
+    margin-bottom: 20px;
+  }
 }
 
 .conferences-card__data {
@@ -51,6 +75,11 @@
   margin: 0;
   margin-bottom: 19px;
   display: block;
+
+  @media (max-width: $m-end) {
+    font-size: 12px;
+    margin-bottom: 29px;
+  }
 }
 
 .conferences-card__ticket {
@@ -65,6 +94,11 @@
   margin: 0 auto;
   margin-bottom: 11px;
   padding: 11px 0;
+
+  @media (max-width: $m-end) {
+    width: 128px;
+    margin-bottom: 20px;
+  }
 }
 
 .conferences-card__excerpt {
@@ -75,4 +109,8 @@
   text-decoration-skip-ink: none;
   display: block;
   text-align: center;
+
+  @media (max-width: $m-end) {
+
+  }
 }
