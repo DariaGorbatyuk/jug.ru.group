@@ -40,7 +40,7 @@ html(lang="ru")
             li.benefits__item
               span.benefits__number 500+
               span.benefits__text часов контента
-      section.speakers
+      section.main__speakers.speakers
         div.container
           h2.speakers__heading Спикеры
           ul.speakers__list
@@ -150,11 +150,73 @@ html(lang="ru")
               button.speaker-card__details(type="button") Подробнее
           a.speakers__more(href="#") Показать ещё!
           a.speakers__more.speakers__more--yes(href="#") Убедили, куплю!
-        section.conferences
-          h2.conferences__heading Ближайшие конференции
+      section.conferences
+        div.container
+          h2.visually-hidden Ближайшие конференции
           ul.conferences__list
-            li.conferences__item.conferences-card
+            li.conferences__item.conference-card
+              svg.conference-card__img(width="135" height="83" role="img")
+                title DEVOOPS
+                use(xlink:href="./img/sprite.svg#icon-devoops")
               h3.conferences-card__heading Heisenbug 2020 Moscow
+              p.conferences-card__text Онлайн-конференция по .NET-разработке
+              span.conferences-card__data 4-7 ноября
+              a.conferences-card__ticket(href="#") Билеты
+              a.conferences-card__excerpt(href="#") Подробнее
+            li.conferences__item.conference-card
+              svg.conference-card__img(width="135" height="83" role="img")
+                title DEVOOPS
+                use(xlink:href="./img/sprite.svg#icon-devoops")
+              h3.conferences-card__heading Heisenbug 2020 Moscow
+              p.conferences-card__text Онлайн-конференция по .NET-разработке
+              span.conferences-card__data 4-7 ноября
+              a.conferences-card__ticket(href="#") Билеты
+              a.conferences-card__excerpt(href="#") Подробнее
+            li.conferences__item.conference-card
+              svg.conference-card__img(width="135" height="83" role="img")
+                title DEVOOPS
+                use(xlink:href="./img/sprite.svg#icon-devoops")
+              h3.conferences-card__heading Heisenbug 2020 Moscow
+              p.conferences-card__text Онлайн-конференция по .NET-разработке
+              span.conferences-card__data 4-7 ноября
+              a.conferences-card__ticket(href="#") Билеты
+              a.conferences-card__excerpt(href="#") Подробнее
+            li.conferences__item.conference-card
+              svg.conference-card__img(width="135" height="83" role="img")
+                title DEVOOPS
+                use(xlink:href="./img/sprite.svg#icon-devoops")
+              h3.conferences-card__heading Heisenbug 2020 Moscow
+              p.conferences-card__text Онлайн-конференция по .NET-разработке
+              span.conferences-card__data 4-7 ноября
+              a.conferences-card__ticket(href="#") Билеты
+              a.conferences-card__excerpt(href="#") Подробнее
+            li.conferences__item.conference-card
+              svg.conference-card__img(width="135" height="83" role="img")
+                title DEVOOPS
+                use(xlink:href="./img/sprite.svg#icon-devoops")
+              h3.conferences-card__heading Heisenbug 2020 Moscow
+              p.conferences-card__text Онлайн-конференция по .NET-разработке
+              span.conferences-card__data 4-7 ноября
+              a.conferences-card__ticket(href="#") Билеты
+              a.conferences-card__excerpt(href="#") Подробнее
+            li.conferences__item.conference-card
+              svg.conference-card__img(width="135" height="83" role="img")
+                title DEVOOPS
+                use(xlink:href="./img/sprite.svg#icon-devoops")
+              h3.conferences-card__heading Heisenbug 2020 Moscow
+              p.conferences-card__text Онлайн-конференция по .NET-разработке
+              span.conferences-card__data 4-7 ноября
+              a.conferences-card__ticket(href="#") Билеты
+              a.conferences-card__excerpt(href="#") Подробнее
+            li.conferences__item.conference-card
+              svg.conference-card__img(width="135" height="83" role="img")
+                title DEVOOPS
+                use(xlink:href="./img/sprite.svg#icon-devoops")
+              h3.conferences-card__heading Heisenbug 2020 Moscow
+              p.conferences-card__text Онлайн-конференция по .NET-разработке
+              span.conferences-card__data 4-7 ноября
+              a.conferences-card__ticket(href="#") Билеты
+              a.conferences-card__excerpt(href="#") Подробнее
     footer
     template#questions
       div.questions.questions--m
