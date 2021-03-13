@@ -10,5 +10,10 @@
 
   @media (max-width: $s-end) {
     padding: 0 20px;
+
+    &--card {
+      padding: 0;
+      //background-color: $gary-light;
+    }
   }
 }

@@ -1,7 +1,7 @@
 .tickets {
 
 
-  @media (max-width: $m-end) {
+  @media (max-width: $s-end) {
 
   }
 }
@@ -11,20 +11,23 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  justify-content: center;
 
-  @media (max-width: $m-end) {
-
+  @media (max-width: $s-end) {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
 .tickets__item {
   margin-right: 20px;
 
-  &:last-child{
+  &:last-child {
     margin-right: 0;
   }
 
-  @media (max-width: $m-end) {
-
+  @media (max-width: $s-end) {
+    margin-right: 0;
   }
 }
