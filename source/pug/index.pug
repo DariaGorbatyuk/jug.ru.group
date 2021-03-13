@@ -150,7 +150,7 @@ html(lang="ru")
               button.speaker-card__details(type="button") Подробнее
           a.speakers__more(href="#") Показать ещё!
           a.speakers__more.speakers__more--yes(href="#") Убедили, куплю!
-      section.conferences
+      section.main__conferences.conferences
         div.container
           h2.visually-hidden Ближайшие конференции
           ul.conferences__list
@@ -217,6 +217,43 @@ html(lang="ru")
               span.conferences-card__data 4-7 ноября
               a.conferences-card__ticket(href="#") Билеты
               a.conferences-card__excerpt(href="#") Подробнее
+
+      section.main__tickets.tickets
+        div.container
+          h2.visually-hidden Тарифы
+          ul.tickets__list
+            li.tickets__item.ticket-card
+              h3.ticket-card__heading Personal
+              span.ticket-card__slogan Порадовать себя
+              ul.ticket-card__list
+                li.ticket-card__item
+                  h4.ticket-card__name One conference
+                  svg.ticket-card__img(width="170" height="75" role="img")
+                    use(xlink:href="./img/sprite.svg#icon-ticket1")
+                  span.ticket-card__price 11500 ₽
+                  a.ticket-card__buy(href="#") Купить
+                li.ticket-card__item
+                  h4.ticket-card__name Full Pass
+                  svg.ticket-card__img(width="171" height="108" role="img")
+                    use(xlink:href="./img/sprite.svg#icon-ticket8")
+                  span.ticket-card__price 23000 ₽
+                  a.ticket-card__buy(href="#") Купить
+            li.tickets__item.ticket-card
+              h3.ticket-card__heading Standard
+              span.ticket-card__slogan Любимым сотрудникам
+              ul.ticket-card__list
+                li.ticket-card__item
+                  h4.ticket-card__name One conference
+                  svg.ticket-card__img(width="170" height="75" role="img")
+                    use(xlink:href="./img/sprite.svg#icon-ticket1")
+                  span.ticket-card__price 23000 ₽
+                  a.ticket-card__buy(href="#") Купить
+                li.ticket-card__item
+                  h4.ticket-card__name Full Pass
+                  svg.ticket-card__img(width="171" height="108" role="img")
+                    use(xlink:href="./img/sprite.svg#icon-ticket8")
+                  span.ticket-card__price 46000 ₽
+                  a.ticket-card__buy(href="#") Купить
     footer
     template#questions
       div.questions.questions--m
