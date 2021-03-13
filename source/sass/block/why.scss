@@ -9,6 +9,11 @@
   text-align: center;
   margin: 0;
   margin-bottom: 80px;
+
+  @media (max-width: $m-end) {
+    font-size: 24px;
+    margin-bottom: 69px;
+  }
 }
 
 .why__list {
@@ -19,6 +24,10 @@
   margin: 0;
   padding-left: 25%;
   padding-right: 17%;
+
+  @media (max-width: $m-end) {
+    padding: 0;
+  }
 }
 
 .why__item {
@@ -48,6 +57,29 @@
       margin-bottom: 8px;
     }
   }
+
+  @media (max-width: $m-end) {
+    background-size: 201px 134px;
+    padding-left: 290px;
+    background-position: 37px 0;
+    min-height: 134px;
+    margin-bottom: 21px;
+
+    &--time {
+      background-position: 37px -17px;
+    }
+    &--water {
+      padding-right: 6%;
+
+      .why__name {
+        padding-top: 16px;
+      }
+    }
+
+    &--relevance {
+      padding-right: 5%;
+    }
+  }
 }
 
 .why__name {
@@ -57,6 +89,12 @@
   margin: 0;
   padding-top: 19px;
   margin-bottom: 13px;
+
+  @media (max-width: $m-end) {
+    font-size: 18px;
+    padding-top: 9px;
+    margin-bottom: 10px;
+  }
 }
 
 .why__text {
@@ -64,4 +102,8 @@
   line-height: 1.5;
   color: rgba($black, 0.7);
   margin: 0;
+
+  @media (max-width: $m-end) {
+    font-size: 14px;
+  }
 }
