@@ -31,13 +31,30 @@
   justify-content: center;
   margin-right: -20px;
   margin-bottom: 18px;
+  position: relative;
+
+  &::after{
+    @include pseudo();
+    @include size(100%, 139px);
+    bottom: 0;
+    pointer-events: none;
+    background-image: linear-gradient(to bottom, transparent 30%, white 65%);
+  }
 
   @media (max-width: $m-end) {
     margin-bottom: 14px;
+
+    &::after{
+      background-image: linear-gradient(to bottom, transparent 40%, white 80%);
+    }
   }
 
   @media (max-width: $s-end) {
     margin-bottom: 20px;
+
+    &::after{
+      display: none;
+    }
   }
 }
 
