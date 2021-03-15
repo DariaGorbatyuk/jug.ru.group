@@ -25,6 +25,7 @@
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   padding: 0;
   margin: 0;
   padding-left: 25%;
@@ -35,12 +36,12 @@
   }
 
   @media (max-width: $s-end) {
-
+    align-items: center;
   }
 }
 
 .why__item {
-  flex-basis: 100%;
+  width: 100%;
   padding-left: 320px;
   min-height: 170px;
   margin-bottom: 40px;
@@ -94,7 +95,7 @@
     padding: 0;
     padding-top: 140px;
     margin-bottom: 43px;
-    max-width: 500px;
+    width: 320px;
 
     &--time {
       order: 1;
