@@ -30,6 +30,14 @@
   }
 }
 
-.main__tickets{
+.main__tickets {
   margin-bottom: 100px;
+}
+
+.main__why {
+  margin-bottom: 96px;
+
+  @media (max-width: $m-end) {
+    margin-bottom: 26px;
+  }
 }

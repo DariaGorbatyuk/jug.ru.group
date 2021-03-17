@@ -1,5 +1,14 @@
 .why {
+  position: relative;
 
+  @media (max-width: $s-end) {
+    &::after {
+      @include pseudo();
+      @include size(100%, 1px);
+      bottom: 0;
+      background-color: rgba($black, 0.5);
+    }
+  }
 }
 
 .why__heading {
@@ -30,9 +39,19 @@
   margin: 0;
   padding-left: 25%;
   padding-right: 17%;
+  position: relative;
 
   @media (max-width: $m-end) {
     padding: 0;
+    padding-bottom: 46px;
+
+    &::after {
+      @include pseudo();
+      @include size(100%, 1px);
+      bottom: 0;
+      left: 0;
+      background-color: rgba($black, 0.5);
+    }
   }
 
   @media (max-width: $s-end) {
@@ -64,7 +83,7 @@
 
     .why__name {
       padding-top: 48px;
-      margin-bottom: 8px;
+      margin-bottom: 13px;
     }
   }
 
