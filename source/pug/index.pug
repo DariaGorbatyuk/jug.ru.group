@@ -274,6 +274,25 @@ html(lang="ru")
             p.about__slogan На словах как Лев Толстой, и на деле Лев Толстой
             p.about__text Все доклады проверяются программными комитетами на современность, адекватность, объективность и полезность. А в программные комитеты мы берем людей, которые не только знают все о том, что происходит в уютненькой айтишечке, но и могут пояснить за адекватность происходящего.
             p.about__text.about__text--tablet У нас нет булшита, инфобизнеса и клинического идиотизма — каждый доклад позволит вам сделать выводы, которые или улучшат что-то в вашей работе, или позволят понять, куда двигаться в будущем.
+      section.main__reviews.reviews
+      div.container
+        h2.reviews__heading Отзывы участников
+        div.reviews__layout
+          button.reviews__btn.reviews__btn--prev(aria-label="Previous" type="button") Previous
+            svg(width="19" height="35" role="img")
+              use(xlink:href="./img/sprite.svg#icon-previous")
+          ul.reviews__slider
+            li.reviews__item
+              blockquote.reviews__quote
+                p.reviews__text Я сравнила две конференции: оффлайн 2019 и онлайн 2020. Онлайн - супер, можно посмотреть несколько докладов, можно в комфортном режиме слушать доклады, переключаться между докладами, а не бегать между залами. Удобно задавать вопросы. Видны все детали доклада, а на последнем ряду зала в оффлайне не видно ни спикера, ни слайды. Онлайн лучше: я не трачу время на проезд и не встаю в 6 утра чтобы успеть доехать к регистрации, 5 дней конференции в онлайн лучше для усвоения докладов, чем 2 дня оффлайн. Конференция для меня - это получение новых знаний и направлений развития, онлайн формат этому полностью соответствует.
+                cite.reviews__author Наталья Изюмская
+            li.reviews__item
+              blockquote.reviews__quote
+                p.reviews__text Онлайн: - удобнее в плане общения со спикерами - не нужно тратить время и деньги на поездки - IDE и все tools под рукой и можно лайвкодить
+                cite.reviews__author Василий Лактионов
+          button.reviews__btn.reviews__btn--next(aria-label="Next" type="button") Next
+            svg(width="19" height="35" role="img")
+              use(xlink:href="./img/sprite.svg#icon-previous")
     footer
     template#questions
       div.questions.questions--m
@@ -320,4 +339,6 @@ html(lang="ru")
       div.bad
         div.bad__box.question-no
           p.bad__text Спасибо, что поделились!
+    script(src="js/jquery-3.6.0.min.js")
+    script(src="js/slick.min.js")
     script(src="js/script.js")

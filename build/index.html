@@ -299,6 +299,36 @@
 					</div>
 				</div>
 			</section>
+			<section class="main__reviews reviews"></section>
+			<div class="container">
+				<h2 class="reviews__heading">Отзывы участников</h2>
+				<div class="reviews__layout">
+					<button class="reviews__btn reviews__btn--prev" aria-label="Previous" type="button">Previous
+						<svg width="19" height="35" role="img">
+							<use xlink:href="./img/sprite.svg#icon-previous"></use>
+						</svg>
+					</button>
+					<ul class="reviews__slider">
+						<li class="reviews__item">
+							<blockquote class="reviews__quote">
+								<p class="reviews__text">Я сравнила две конференции: оффлайн 2019 и онлайн 2020. Онлайн - супер, можно посмотреть несколько докладов, можно в комфортном режиме слушать доклады, переключаться между докладами, а не бегать между залами. Удобно задавать вопросы. Видны все детали доклада, а на последнем ряду зала в оффлайне не видно ни спикера, ни слайды. Онлайн лучше: я не трачу время на проезд и не встаю в 6 утра чтобы успеть доехать к регистрации, 5 дней конференции в онлайн лучше для усвоения докладов, чем 2 дня оффлайн. Конференция для меня - это получение новых знаний и направлений развития, онлайн формат этому полностью соответствует.</p>
+								<cite class="reviews__author">Наталья Изюмская</cite>
+							</blockquote>
+						</li>
+						<li class="reviews__item">
+							<blockquote class="reviews__quote">
+								<p class="reviews__text">Онлайн: - удобнее в плане общения со спикерами - не нужно тратить время и деньги на поездки - IDE и все tools под рукой и можно лайвкодить</p>
+								<cite class="reviews__author">Василий Лактионов</cite>
+							</blockquote>
+						</li>
+					</ul>
+					<button class="reviews__btn reviews__btn--next" aria-label="Next" type="button">Next
+						<svg width="19" height="35" role="img">
+							<use xlink:href="./img/sprite.svg#icon-previous"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
 		</main>
 		<footer></footer>
 		<template id="questions">
@@ -355,6 +385,8 @@
 				</div>
 			</div>
 		</template>
+		<script src="js/jquery-3.6.0.min.js"></script>
+		<script src="js/slick.min.js"></script>
 		<script src="js/script.js"></script>
 	</body>
 </html>

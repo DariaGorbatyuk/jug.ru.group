@@ -56,3 +56,18 @@ linksToModal.forEach((link) => {
   link.addEventListener('click', onlinksToModalClick)
 });
 
+$(document).ready(function () {
+  $('.reviews__slider').slick({
+    slidesToShow: 1,
+    speed: 1000,
+    easing: 'ease',
+    infinite: true,
+    arrows: true,
+    appendArrows: $('.reviews__layout'),
+    prevArrow: $('.reviews__btn--prev'),
+    nextArrow: $('.reviews__btn--next'),
+    // autoplay: true,
+    // autoplaySpeed: 3000,
+  });
+});
+
