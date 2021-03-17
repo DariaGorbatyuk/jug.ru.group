@@ -47,4 +47,8 @@
 }
 .main__about{
   margin-bottom: 132px;
+
+  @media (max-width: $m-end) {
+    margin-bottom: 122px;
+  }
 }
