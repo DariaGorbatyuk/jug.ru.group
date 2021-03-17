@@ -2,6 +2,8 @@
   position: relative;
 
   @media (max-width: $s-end) {
+    padding-bottom: 26px;
+
     &::after {
       @include pseudo();
       @include size(100%, 1px);
@@ -56,6 +58,11 @@
 
   @media (max-width: $s-end) {
     align-items: center;
+    padding-bottom: 0;
+
+    &::after {
+      display: none;
+    }
   }
 }
 
@@ -114,7 +121,7 @@
     padding: 0;
     padding-top: 140px;
     margin-bottom: 43px;
-    width: 320px;
+    width: 280px;
 
     &--time {
       order: 1;
@@ -128,7 +135,7 @@
       order: 3;
 
       .why__name {
-        padding-top: 14px;
+        padding-top: 10px;
       }
     }
   }
