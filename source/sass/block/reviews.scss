@@ -36,6 +36,8 @@
 
   @media (max-width: $s-end) {
     padding: 0;
+    max-width: 320px;
+    margin: 0 auto;
   }
 }
 
@@ -65,6 +67,11 @@
   overflow: hidden;
 }
 
+.reviews__slider .slick-slide {
+  &:focus{
+    outline: none;
+  }
+}
 
 .reviews__quote {
   background: $gary-light;
@@ -110,7 +117,6 @@
   font-size: 14px;
   line-height: 1.5;
   color: rgba($black, 0.7);
-  margin-top: auto;
   align-self: flex-end;
 
   @media (max-width: $s-end) {
@@ -165,11 +171,11 @@
 
   @media (max-width: $s-end) {
     &--prev {
-      left: -10px;
+      left: 0;
     }
 
     &--next {
-      right: -10px;
+      right: 0;
     }
   }
 }
