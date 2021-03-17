@@ -1,19 +1,11 @@
-.benefits {
+.list-nt {
   padding: 0;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-
-  @media (max-width: $m-end) {
-
-  }
-
-  @media (max-width: $s-end) {
-
-  }
 }
 
-.benefits__item {
+.list-nt__item {
   margin-right: auto;
   display: flex;
   align-items: center;
@@ -43,7 +35,7 @@
   }
 }
 
-.benefits__number {
+.list-nt__number {
   font-weight: bold;
   font-size: 50px;
   line-height: 122%;
@@ -59,10 +51,14 @@
   }
 }
 
-.benefits__text {
+.list-nt__text {
   font-weight: 300;
   font-size: 18px;
   line-height: 150%;
+
+  &--add{
+    max-width: 107px;
+  }
 
   @media (max-width: $m-end) {
     font-size: 14px;

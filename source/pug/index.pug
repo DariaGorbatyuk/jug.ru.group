@@ -27,19 +27,19 @@ html(lang="ru")
             div.full-pass__img-container
               img(src="./img/fullpass_ticket.jpg" alt="Билет на 7 конференций" srcset="./img/fullpass_ticket@2x.jpg" width="610" height="272")
             a.full-pass__buy(href="#") Купить Full Pass
-          ul.full-pass__benefits.benefits
-            li.benefits__item
-              span.benefits__number 7
-              span.benefits__text направлений
-            li.benefits__item
-              span.benefits__number 200
-              span.benefits__text спикеров
-            li.benefits__item
-              span.benefits__number 250
-              span.benefits__text докладов
-            li.benefits__item
-              span.benefits__number 500+
-              span.benefits__text часов контента
+          ul.full-pass__benefits.list-nt
+            li.list-nt__item
+              span.list-nt__number 7
+              span.list-nt__text направлений
+            li.list-nt__item
+              span.list-nt__number 200
+              span.list-nt__text спикеров
+            li.list-nt__item
+              span.list-nt__number 250
+              span.list-nt__text докладов
+            li.list-nt__item
+              span.list-nt__number 500+
+              span.list-nt__text часов контента
       section.main__speakers.speakers
         div.container
           h2.speakers__heading Спикеры
@@ -275,24 +275,42 @@ html(lang="ru")
             p.about__text Все доклады проверяются программными комитетами на современность, адекватность, объективность и полезность. А в программные комитеты мы берем людей, которые не только знают все о том, что происходит в уютненькой айтишечке, но и могут пояснить за адекватность происходящего.
             p.about__text.about__text--tablet У нас нет булшита, инфобизнеса и клинического идиотизма — каждый доклад позволит вам сделать выводы, которые или улучшат что-то в вашей работе, или позволят понять, куда двигаться в будущем.
       section.main__reviews.reviews
-      div.container
-        h2.reviews__heading Отзывы участников
-        div.reviews__layout
-          button.reviews__btn.reviews__btn--prev(aria-label="Previous" type="button") Previous
-            svg(width="19" height="35" role="img")
-              use(xlink:href="./img/sprite.svg#icon-previous")
-          ul.reviews__slider
-            li.reviews__item
-              blockquote.reviews__quote
-                p.reviews__text Я сравнила две конференции: оффлайн 2019 и онлайн 2020. Онлайн - супер, можно посмотреть несколько докладов, можно в комфортном режиме слушать доклады, переключаться между докладами, а не бегать между залами. Удобно задавать вопросы. Видны все детали доклада, а на последнем ряду зала в оффлайне не видно ни спикера, ни слайды. Онлайн лучше: я не трачу время на проезд и не встаю в 6 утра чтобы успеть доехать к регистрации, 5 дней конференции в онлайн лучше для усвоения докладов, чем 2 дня оффлайн. Конференция для меня - это получение новых знаний и направлений развития, онлайн формат этому полностью соответствует.
-                cite.reviews__author Наталья Изюмская
-            li.reviews__item
-              blockquote.reviews__quote
-                p.reviews__text Онлайн: - удобнее в плане общения со спикерами - не нужно тратить время и деньги на поездки - IDE и все tools под рукой и можно лайвкодить
-                cite.reviews__author Василий Лактионов
-          button.reviews__btn.reviews__btn--next(aria-label="Next" type="button") Next
-            svg(width="19" height="35" role="img")
-              use(xlink:href="./img/sprite.svg#icon-previous")
+        div.container
+          h2.reviews__heading Отзывы участников
+          div.reviews__layout
+            button.reviews__btn.reviews__btn--prev(aria-label="Previous" type="button") Previous
+              svg(width="19" height="35" role="img")
+                use(xlink:href="./img/sprite.svg#icon-previous")
+            ul.reviews__slider
+              li.reviews__item
+                blockquote.reviews__quote
+                  p.reviews__text Я сравнила две конференции: оффлайн 2019 и онлайн 2020. Онлайн - супер, можно посмотреть несколько докладов, можно в комфортном режиме слушать доклады, переключаться между докладами, а не бегать между залами. Удобно задавать вопросы. Видны все детали доклада, а на последнем ряду зала в оффлайне не видно ни спикера, ни слайды. Онлайн лучше: я не трачу время на проезд и не встаю в 6 утра чтобы успеть доехать к регистрации, 5 дней конференции в онлайн лучше для усвоения докладов, чем 2 дня оффлайн. Конференция для меня - это получение новых знаний и направлений развития, онлайн формат этому полностью соответствует.
+                  cite.reviews__author Наталья Изюмская
+              li.reviews__item
+                blockquote.reviews__quote
+                  p.reviews__text Онлайн: - удобнее в плане общения со спикерами - не нужно тратить время и деньги на поездки - IDE и все tools под рукой и можно лайвкодить
+                  cite.reviews__author Василий Лактионов
+            button.reviews__btn.reviews__btn--next(aria-label="Next" type="button") Next
+              svg(width="19" height="35" role="img")
+                use(xlink:href="./img/sprite.svg#icon-previous")
+
+      section.main__additional.additional
+        div.container
+          div.additional__top
+            h2.additional__heading О нас
+            p.additional__desc Мы, JUG Ru Group, бережно организуем крупнейшие конференции для программистов с 2013 года.
+              br
+              |В&nbsp;нашей команде обладатели званий Java Champion, Microsoft MVP, Google Developer Expert, Google Developer Group Lead.
+          ul.additional__bottom.list-nt.list-nt--add
+            li.list-nt__item.list-nt__item--add
+              span.list-nt__number 7
+              span.list-nt__text.list-nt__text--add лет опыта
+            li.list-nt__item.list-nt__item--add
+              span.list-nt__number 67
+              span.list-nt__text.list-nt__text--add конференций проведено
+            li.list-nt__item.list-nt__item--add
+              span.list-nt__number 30 700
+              span.list-nt__text.list-nt__text--add довольных участников
     footer
     template#questions
       div.questions.questions--m

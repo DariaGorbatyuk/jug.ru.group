@@ -56,3 +56,15 @@
     margin-bottom: 45px;
   }
 }
+
+.main__reviews{
+  margin-bottom: 125px;
+
+  @media (max-width: $m-end) {
+
+  }
+
+  @media (max-width: $s-end) {
+
+  }
+}
