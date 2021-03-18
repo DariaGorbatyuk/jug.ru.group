@@ -29,6 +29,21 @@
       top: 66px;
     }
   }
+
+  @media (max-width: $s-end) {
+    padding-bottom: 22px;
+
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      @include pseudo($pos: relative);
+      @include size(100%, 135px);
+      background-image: url("../img/black-mountains-320.svg");
+      background-color: $white;
+    }
+  }
 }
 
 .additional__top {
@@ -44,6 +59,15 @@
     padding-top: 40px;
     margin-bottom: 52px;
   }
+
+  @media (max-width: $s-end) {
+    padding-top: 28px;
+    background-image: url("../img/icon-duck_site.svg");
+    background-size: auto 124px;
+    padding-bottom: 169px;
+    background-position: center 96%;
+    margin-bottom: 31px;
+  }
 }
 
 .additional__heading {
@@ -58,6 +82,12 @@
   @media (max-width: $m-end) {
     font-size: 24px;
     padding-left: 0;
+  }
+
+  @media (max-width: $s-end) {
+    width: auto;
+    padding-right: 10%;
+    margin-bottom: 15px;
   }
 }
 
@@ -78,6 +108,16 @@
       margin-bottom: 10px;
     }
   }
+
+  @media (max-width: $s-end) {
+    font-size: 12px;
+    width: auto;
+    max-width: 550px;
+
+    &:first-of-type {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .additional__bottom {
@@ -86,5 +126,9 @@
 
   @media (max-width: $m-end) {
     margin: 0 0 0 4%;
+  }
+
+  @media (max-width: $s-end) {
+    margin: 0;
   }
 }
