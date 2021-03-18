@@ -18,6 +18,12 @@
     background-size: auto 167px, auto auto;
     padding-bottom: 30px;
   }
+
+  @media (max-width: $s-end) {
+    background-image: url("../img/yellow_lines_background.svg"), linear-gradient(to bottom, $black, $black 42px, $white 42px);
+    background-size: auto 82px, auto auto;
+    padding-top: 138px;
+  }
 }
 
 .footer__layout {
@@ -30,16 +36,34 @@
     grid-template-rows: repeat(3, min-content);
     align-items: flex-start;
   }
+
+  @media (max-width: $s-end) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .footer__logo {
   width: 138px;
   height: 45px;
+  display: block;
 
   @media (max-width: $m-end) {
     grid-column: 1/2;
     grid-row: 1/2;
     margin-left: 66px;
+  }
+
+  @media (max-width: $s-end) {
+    width: 118px;
+    height: 37px;
+    order: -2;
+    margin: 0 auto 30px;
+
+    svg {
+      width: 118px;
+      height: 37px;
+    }
   }
 }
 
@@ -59,8 +83,13 @@
     grid-column: 2/-1;
     display: grid;
     grid-template-columns: 38% 62%;
-    grid-template-rows: minmax(min-content, 30px) minmax(min-content, 53px) repeat(2,minmax(min-content, 30px));
+    grid-template-rows: minmax(min-content, 30px) minmax(min-content, 53px) repeat(2, minmax(min-content, 30px));
     margin-bottom: 23px;
+  }
+
+  @media (max-width: $s-end) {
+    grid-template-columns: 42% 58%;
+    grid-template-rows: minmax(min-content, 25px) minmax(min-content, 37px) repeat(2, minmax(min-content, 25px));
   }
 }
 
@@ -70,10 +99,6 @@
   font-size: 12px;
   line-height: 1.5;
   color: rgba($black, 0.5);
-
-  @media (max-width: $m-end) {
-
-  }
 }
 
 .footer__contacts-def {
@@ -81,10 +106,6 @@
   font-size: 12px;
   line-height: 1.5;
   margin: 0;
-
-  @media (max-width: $m-end) {
-
-  }
 }
 
 .footer__rules {
@@ -105,7 +126,13 @@
   margin-bottom: 13px;
 
   @media (max-width: $m-end) {
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+  }
 
+  @media (max-width: $s-end) {
+    font-size: 11px;
+    margin-bottom: 10px;
   }
 }
 
@@ -116,7 +143,12 @@
   display: block;
 
   @media (max-width: $m-end) {
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+  }
 
+  @media (max-width: $s-end) {
+    font-size: 11px;
   }
 }
 
@@ -130,6 +162,10 @@
     grid-column: 1/-1;
     text-align: center;
     margin-top: 55px;
+  }
+
+  @media (max-width: $s-end) {
+    display: none;
   }
 }
 
@@ -146,5 +182,11 @@
     margin-top: 56px;
     justify-self: flex-start;
     margin-left: 74px;
+  }
+
+  @media (max-width: $s-end) {
+    margin: 0 auto;
+    order: -1;
+    margin-bottom: 40px;
   }
 }
