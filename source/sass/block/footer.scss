@@ -1,0 +1,83 @@
+.footer {
+  font-family: $font;
+  font-style: normal;
+  color: $black;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.5;
+  background-color: $gray;
+  padding-top: 396px;
+  background-image: url("../img/yellow_lines_background.svg"), linear-gradient(to bottom, $black, $black 234px, $gray 234px);
+  background-repeat: repeat-x;
+  background-position: left top;
+}
+
+.footer__layout {
+  display: grid;
+  grid-template-columns: minmax(min-content, 170px) 1fr  minmax(min-content, 242px);
+  grid-template-rows: min-content minmax(min-content, 120px);
+}
+
+.footer__logo {
+
+}
+
+.footer__contacts {
+  margin: 0;
+  justify-self: flex-start;
+  display: grid;
+  grid-template-columns: minmax(min-content, 120px) minmax(min-content, 194px) minmax(min-content, 120px) minmax(min-content, 194px);
+  grid-template-rows: repeat(2, 31px);
+  justify-items: flex-start;
+  padding: 0;
+  margin-left: 141px;
+}
+
+
+.footer__contacts-term {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.5;
+  color: rgba($black, 0.5);
+}
+
+.footer__contacts-def {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.footer__rules {
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+
+.footer__policy {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.5;
+  display: block;
+  margin-bottom: 13px;
+}
+
+.footer__behave {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.5;
+  display: block;
+}
+
+
+.footer__copyright {
+  color: rgba($black, 0.5);
+  align-self: center;
+}
+
+.footer__socials {
+  margin: 0;
+  justify-self: center;
+  align-self: center;
+  max-width: 630px;
+  margin-left: 75px;
+}

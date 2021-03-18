@@ -1,0 +1,23 @@
+.socials {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.socials__item {
+  margin-right: 7px;
+}
+
+.socials__link {
+  @include square(35px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $white;
+  border-radius: 50%;
+}
+
+.socials__svg {
+
+}
