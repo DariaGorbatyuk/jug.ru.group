@@ -25,6 +25,15 @@
   background-color: $white;
   border-radius: 50%;
 
+  &:hover,
+  &:focus{
+    outline: none;
+
+    svg{
+     filter: invert(.5) sepia(1) saturate(5) hue-rotate(8deg);
+    }
+  }
+
   @media (max-width: $m-end) {
     background-color: $socials;
   }

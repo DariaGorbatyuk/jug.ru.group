@@ -33,7 +33,7 @@
   margin-bottom: 16px;
   position: relative;
 
-  &::after{
+  &::after {
     @include pseudo();
     @include size(100%, 139px);
     bottom: 0;
@@ -44,7 +44,7 @@
   @media (max-width: $m-end) {
     margin-bottom: 11px;
 
-    &::after{
+    &::after {
       background-image: linear-gradient(to bottom, transparent 40%, white 80%);
     }
   }
@@ -52,7 +52,7 @@
   @media (max-width: $s-end) {
     margin-bottom: 20px;
 
-    &::after{
+    &::after {
       display: none;
     }
   }
@@ -83,6 +83,12 @@
   display: block;
   width: 162px;
   margin: 0 auto;
+
+  &:hover,
+  &:focus {
+    animation: btn-more 90ms ease-in forwards;
+    animation-iteration-count: 1;
+  }
 
   &--yes {
     display: none;

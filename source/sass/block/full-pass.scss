@@ -92,6 +92,13 @@
   line-height: 1.22;
   padding: 12px 0;
   text-align: center;
+  transition: all 300ms;
+
+  &:hover,
+  &:focus{
+    outline: none;
+    transform: scale(1.1);
+  }
 
   @media (max-width: $m-end) {
     justify-self: center;

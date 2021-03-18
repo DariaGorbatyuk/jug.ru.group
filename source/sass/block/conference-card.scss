@@ -7,6 +7,13 @@
   position: relative;
   padding: 57px 26px 21px;
   font-weight: normal;
+  transition: all 300ms ease-in;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    transform: scale(1.03);
+  }
 
   &::before {
     @include pseudo($content: "Онлайн");
@@ -35,7 +42,7 @@
     width: 280px;
     padding: 56px 20px 16px;
 
-    &::before{
+    &::before {
       top: 20px;
       background-position: 12px 0;
       padding-left: 31px;
@@ -114,6 +121,14 @@
   margin-bottom: 11px;
   padding: 11px 0;
 
+  &:hover,
+  &:focus {
+    outline: none;
+    animation: btn-conf 90ms linear forwards;
+    animation-iteration-count: 1;
+    color: $white;
+  }
+
   @media (max-width: $m-end) {
     width: 128px;
     margin-bottom: 20px;
@@ -135,6 +150,12 @@
   text-decoration-skip-ink: none;
   display: block;
   text-align: center;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    color: $violet;
+  }
 
   @media (max-width: $s-end) {
     font-size: 11px;

@@ -68,7 +68,7 @@
 }
 
 .reviews__slider .slick-slide {
-  &:focus{
+  &:focus {
     outline: none;
   }
 }
@@ -157,6 +157,10 @@
   &:focus {
     outline: none;
     transform: translateY(-50%) scale(1.2);
+
+    svg {
+      filter: invert(.5) sepia(1) saturate(5) hue-rotate(8deg);
+    }
   }
 
   @media (max-width: $m-end) {

@@ -35,3 +35,41 @@
     top: 7vh;
   }
 }
+
+@keyframes btn-more {
+  0%{
+    background-image: linear-gradient(to right, $black);
+  }
+  25%{
+    background-image: linear-gradient(to right, $yellow 0, $yellow 25%, $black 25%);
+  }
+
+  50%{
+    background-image: linear-gradient(to right, $yellow 0, $yellow 50%, $black 50%);
+  }
+  75%{
+    background-image: linear-gradient(to right, $yellow 0, $yellow 75%, $black 75%);
+  }
+  100%{
+    background-image: linear-gradient(to right, $yellow);
+  }
+}
+
+@keyframes btn-conf {
+  0%{
+    background-image: linear-gradient(to right, $white);
+  }
+  25%{
+    background-image: linear-gradient(to right, $violet 0, $violet 25%, $white 25%);
+  }
+
+  50%{
+    background-image: linear-gradient(to right, $violet 0, $violet 50%, $white 50%);
+  }
+  75%{
+    background-image: linear-gradient(to right, $violet 0, $violet 75%, $white 75%);
+  }
+  100%{
+    background-image: linear-gradient(to right, $violet);
+  }
+}

@@ -24,6 +24,19 @@
     background-size: auto 82px, auto auto;
     padding-top: 138px;
   }
+
+  a {
+    &:hover,
+    &:focus {
+      outline: none;
+      color: $yellow-active;
+      transform: scale(1.03);
+    }
+
+    &:active {
+      color: $yellow-active;
+    }
+  }
 }
 
 .footer__layout {
