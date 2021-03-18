@@ -10,16 +10,37 @@
   background-image: url("../img/yellow_lines_background.svg"), linear-gradient(to bottom, $black, $black 234px, $gray 234px);
   background-repeat: repeat-x;
   background-position: left top;
+
+  @media (max-width: $m-end) {
+    background-color: $white;
+    background-image: url("../img/yellow_lines_background.svg"), linear-gradient(to bottom, $black, $black 78px, $white 78px);
+    padding-top: 244px;
+    background-size: auto 167px, auto auto;
+    padding-bottom: 30px;
+  }
 }
 
 .footer__layout {
   display: grid;
   grid-template-columns: minmax(min-content, 170px) 1fr  minmax(min-content, 242px);
   grid-template-rows: min-content minmax(min-content, 120px);
+
+  @media (max-width: $m-end) {
+    grid-template-columns: 51.6% 48.4%;
+    grid-template-rows: repeat(3, min-content);
+    align-items: flex-start;
+  }
 }
 
 .footer__logo {
+  width: 138px;
+  height: 45px;
 
+  @media (max-width: $m-end) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin-left: 66px;
+  }
 }
 
 .footer__contacts {
@@ -31,6 +52,16 @@
   justify-items: flex-start;
   padding: 0;
   margin-left: 141px;
+
+  @media (max-width: $m-end) {
+    width: 100%;
+    margin-left: 0;
+    grid-column: 2/-1;
+    display: grid;
+    grid-template-columns: 38% 62%;
+    grid-template-rows: minmax(min-content, 30px) minmax(min-content, 53px) repeat(2,minmax(min-content, 30px));
+    margin-bottom: 23px;
+  }
 }
 
 
@@ -39,6 +70,10 @@
   font-size: 12px;
   line-height: 1.5;
   color: rgba($black, 0.5);
+
+  @media (max-width: $m-end) {
+
+  }
 }
 
 .footer__contacts-def {
@@ -46,11 +81,20 @@
   font-size: 12px;
   line-height: 1.5;
   margin: 0;
+
+  @media (max-width: $m-end) {
+
+  }
 }
 
 .footer__rules {
   grid-column: 3/4;
   grid-row: 1/2;
+
+  @media (max-width: $m-end) {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
 }
 
 .footer__policy {
@@ -59,6 +103,10 @@
   line-height: 1.5;
   display: block;
   margin-bottom: 13px;
+
+  @media (max-width: $m-end) {
+
+  }
 }
 
 .footer__behave {
@@ -66,12 +114,23 @@
   font-size: 12px;
   line-height: 1.5;
   display: block;
+
+  @media (max-width: $m-end) {
+
+  }
 }
 
 
 .footer__copyright {
   color: rgba($black, 0.5);
   align-self: center;
+
+  @media (max-width: $m-end) {
+    grid-row: 3/4;
+    grid-column: 1/-1;
+    text-align: center;
+    margin-top: 55px;
+  }
 }
 
 .footer__socials {
@@ -80,4 +139,12 @@
   align-self: center;
   max-width: 630px;
   margin-left: 75px;
+
+  @media (max-width: $m-end) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin-top: 56px;
+    justify-self: flex-start;
+    margin-left: 74px;
+  }
 }

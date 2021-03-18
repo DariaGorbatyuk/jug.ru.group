@@ -3,10 +3,18 @@
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+
+  @media (max-width: $m-end) {
+
+  }
 }
 
 .socials__item {
   margin-right: 7px;
+
+  @media (max-width: $m-end) {
+
+  }
 }
 
 .socials__link {
@@ -16,6 +24,10 @@
   align-items: center;
   background-color: $white;
   border-radius: 50%;
+
+  @media (max-width: $m-end) {
+    background-color: $socials;
+  }
 }
 
 .socials__svg {
