@@ -5,8 +5,8 @@ html(lang="ru")
     header.header
       div.header__gradient
       div.container
-        a.header__logo
-          svg.header__svg(width="126" height="41" role="img" aria-labelledby="logo-title")
+        a.header__logo(aria-labelledby="logo-title")
+          svg.header__svg(width="126" height="41" role="img")
             title#logo-title Вы уже на главной странице
             use(xlink:href="./img/sprite.svg#icon-logo")
         h1.visually-hidden Конференции в сфере IT
@@ -311,6 +311,40 @@ html(lang="ru")
               span.list-nt__number.list-nt__number--add 30 700
               span.list-nt__text.list-nt__text--add довольных участников
     footer
+      div.container
+        div.footer__top
+          a.footer__logo
+            svg(width="138" height="45" role="img")
+              use(xlink:href="./img/sprite.svg#icon-logo")
+          dl.footer__contacts
+            dt.footer__contacts-inf Информация
+            dd.footer__contacts-def info@jugru.org
+            dt.footer__contacts-inf Поддержка
+            dd.footer__contacts-def support@jugru.org
+            dt.footer__contacts-inf Офис
+            dd.footer__contacts-def +7 812 904 4212
+            dt.footer__contacts-inf Отдел продаж
+            dd.footer__contacts-def +7 812 904 6648
+          a.footer__policy(href="#") Политика конфиденциальности
+          a.footer__behave Нормы поведения
+        div.footer__bottom
+          span.footer__copyright &copy;&nbsp;2012&ndash;2020&nbsp;JUG Ru&nbsp;Group.
+          ul.footer__socials.socials
+            li.socials__item
+              a.socials__link(href="#" aria-labelledby="vk")
+                svg.socials__svg(width="21" height="12" role="img")
+                  title#vk Мы вконтакте
+                  use(xlink:href="./img/sprite.svg#icon-vk")
+            li.socials__item
+              a.socials__link(href="#" aria-labelledby="f")
+                svg.socials__svg(width="10" height="20" role="img")
+                  title#f Мы в фэйсбуке
+                  use(xlink:href="./img/sprite.svg#icon-f")
+            li.socials__item
+              a.socials__link(href="#" aria-labelledby="tw")
+                svg.socials__svg(width="18" height="18" role="img")
+                  title#tw Мы в твиттере
+                  use(xlink:href="./img/sprite.svg#icon-tw-s")
     template#questions
       div.questions.questions--m
         div.questions__box.questions__box--m

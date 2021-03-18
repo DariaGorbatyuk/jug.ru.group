@@ -11,8 +11,8 @@
 	<body>
 		<header class="header">
 			<div class="header__gradient"></div>
-			<div class="container"><a class="header__logo">
-					<svg class="header__svg" width="126" height="41" role="img" aria-labelledby="logo-title">
+			<div class="container"><a class="header__logo" aria-labelledby="logo-title">
+					<svg class="header__svg" width="126" height="41" role="img">
 						<title id="logo-title">Вы уже на главной странице</title>
 						<use xlink:href="./img/sprite.svg#icon-logo"></use>
 					</svg></a>
@@ -345,7 +345,44 @@
 				</div>
 			</section>
 		</main>
-		<footer></footer>
+		<footer>
+			<div class="container">
+				<div class="footer__top"><a class="footer__logo">
+						<svg width="138" height="45" role="img">
+							<use xlink:href="./img/sprite.svg#icon-logo"></use>
+						</svg></a>
+					<dl class="footer__contacts">
+						<dt class="footer__contacts-inf">Информация</dt>
+						<dd class="footer__contacts-def">info@jugru.org</dd>
+						<dt class="footer__contacts-inf">Поддержка</dt>
+						<dd class="footer__contacts-def">support@jugru.org</dd>
+						<dt class="footer__contacts-inf">Офис</dt>
+						<dd class="footer__contacts-def">+7 812 904 4212</dd>
+						<dt class="footer__contacts-inf">Отдел продаж</dt>
+						<dd class="footer__contacts-def">+7 812 904 6648</dd>
+					</dl><a class="footer__policy" href="#">Политика конфиденциальности</a><a class="footer__behave">Нормы поведения</a>
+				</div>
+				<div class="footer__bottom"><span class="footer__copyright">&copy;&nbsp;2012&ndash;2020&nbsp;JUG Ru&nbsp;Group.</span>
+					<ul class="footer__socials socials">
+						<li class="socials__item"><a class="socials__link" href="#" aria-labelledby="vk">
+								<svg class="socials__svg" width="21" height="12" role="img">
+									<title id="vk">Мы вконтакте</title>
+									<use xlink:href="./img/sprite.svg#icon-vk"></use>
+								</svg></a></li>
+						<li class="socials__item"><a class="socials__link" href="#" aria-labelledby="f">
+								<svg class="socials__svg" width="10" height="20" role="img">
+									<title id="f">Мы в фэйсбуке</title>
+									<use xlink:href="./img/sprite.svg#icon-f"></use>
+								</svg></a></li>
+						<li class="socials__item"><a class="socials__link" href="#" aria-labelledby="tw">
+								<svg class="socials__svg" width="18" height="18" role="img">
+									<title id="tw">Мы в твиттере</title>
+									<use xlink:href="./img/sprite.svg#icon-tw-s"></use>
+								</svg></a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
 		<template id="questions">
 			<div class="questions questions--m">
 				<div class="questions__box questions__box--m">
