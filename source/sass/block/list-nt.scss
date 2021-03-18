@@ -22,6 +22,10 @@
     flex-direction: column;
     padding-right: 15px;
     justify-content: center;
+
+    &--add{
+      flex-direction: row;
+    }
   }
 
   @media (max-width: $s-end) {
@@ -44,6 +48,10 @@
   @media (max-width: $m-end) {
     font-size: 30px;
     margin-right: 0;
+
+    &--add{
+      padding-right: 17px;
+    }
   }
 
   @media (max-width: $s-end) {
