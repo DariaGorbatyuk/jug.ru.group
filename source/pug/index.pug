@@ -222,7 +222,7 @@ html(lang="ru")
         div.container.container--card
           h2.visually-hidden Тарифы
           ul.tickets__list
-            li.tickets__item.ticket-card
+            li.tickets__item.ticket-card(tabindex="0")
               h3.ticket-card__heading Personal
               span.ticket-card__slogan Порадовать себя
               ul.ticket-card__list
@@ -238,7 +238,7 @@ html(lang="ru")
                     use(xlink:href="./img/sprite.svg#icon-ticket8")
                   span.ticket-card__price 23000 ₽
                   a.ticket-card__buy(href="#") Купить
-            li.tickets__item.ticket-card
+            li.tickets__item.ticket-card(tabindex="0")
               h3.ticket-card__heading Standard
               span.ticket-card__slogan Любимым сотрудникам
               ul.ticket-card__list
