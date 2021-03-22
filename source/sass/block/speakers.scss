@@ -83,11 +83,34 @@
   display: block;
   width: 162px;
   margin: 0 auto;
+  position: relative;
+
+  span {
+    position: relative;
+    z-index: 2;
+  }
+
+  &::before {
+    @include pseudo();
+    transition-timing-function: linear;
+    transition-duration: 300ms;
+    height: 100%;
+    width: 0;
+    background: $yellow;
+    color: $white;
+    left: 0;
+    top: 0;
+    border-radius: 24px;
+  }
 
   &:hover,
   &:focus {
-    animation: btn-more 90ms ease-in forwards;
-    animation-iteration-count: 1;
+    outline: none;
+    color: $white;
+
+    &::before {
+      width: 100%;
+    }
   }
 
   &--yes {

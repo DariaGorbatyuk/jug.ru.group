@@ -120,13 +120,35 @@
   margin: 0 auto;
   margin-bottom: 11px;
   padding: 11px 0;
+  position: relative;
+  transition: border-radius 80ms;
+
+  span {
+    position: relative;
+    z-index: 2;
+  }
+
+  &::before {
+    @include pseudo();
+    transition-timing-function: linear;
+    transition-duration: 300ms;
+    height: 100%;
+    width: 0;
+    background: $violet;
+    color: $white;
+    left: 0;
+    top: 0;
+    border-radius: 24px;
+  }
 
   &:hover,
   &:focus {
     outline: none;
-    animation: btn-conf 90ms linear forwards;
-    animation-iteration-count: 1;
     color: $white;
+
+    &::before {
+      width: 100%;
+    }
   }
 
   @media (max-width: $m-end) {
