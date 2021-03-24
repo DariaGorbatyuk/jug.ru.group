@@ -39,4 +39,11 @@
       background-image: url("../img/thumb@2x.png");
     }
   }
+
+  @media (max-width: $s-end) {
+    &::before {
+      @include size(100px, 100px);
+      background-size: contain;
+    }
+  }
 }

@@ -4,6 +4,7 @@
 @import "mixin";
 @import "keyframes";
 @import "block/visually-hidden";
+@import "block/overflow";
 @import "block/container";
 @import "block/header";
 @import "block/questions";
@@ -12,7 +13,6 @@
 @import "block/question-no";
 @import "block/thankyou";
 @import "block/bad";
-@import "block/thankyou-text";
 @import "block/main";
 @import "block/full-pass";
 @import "block/list-nt";
